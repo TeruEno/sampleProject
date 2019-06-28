@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0421132822BF3F340007E362 /* CullenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421132722BF3F340007E362 /* CullenderViewController.swift */; };
 		0421132A22BF4E4B0007E362 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0421132922BF4E4B0007E362 /* SettingTableViewController.swift */; };
 		044ABD0A22B0C67900CC63A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ABD0922B0C67900CC63A4 /* AppDelegate.swift */; };
 		044ABD0C22B0C67900CC63A4 /* CullenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ABD0B22B0C67900CC63A4 /* CullenderViewController.swift */; };
 		044ABD0F22B0C67900CC63A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD0D22B0C67900CC63A4 /* Main.storyboard */; };
 		044ABD1122B0C67C00CC63A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD1022B0C67C00CC63A4 /* Assets.xcassets */; };
 		044ABD1422B0C67C00CC63A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD1222B0C67C00CC63A4 /* LaunchScreen.storyboard */; };
+		045048F122C3500A002F7825 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045048F022C3500A002F7825 /* RegistViewController.swift */; };
 		047A23EE22BF837300B89632 /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23ED22BF837300B89632 /* HistoryListViewController.swift */; };
 		047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23EF22BF839500B89632 /* HistoryViewController.swift */; };
+		0490634C22C5FB240034359E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490634B22C5FB240034359E /* RecordViewController.swift */; };
 		6F0791472E19E4422CC5E1ED /* Pods_sampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15AF39031C358F6240030E0 /* Pods_sampleProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0421132722BF3F340007E362 /* CullenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CullenderViewController.swift; sourceTree = "<group>"; };
 		0421132922BF4E4B0007E362 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		044ABD0622B0C67900CC63A4 /* sampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044ABD0922B0C67900CC63A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,8 +29,10 @@
 		044ABD1022B0C67C00CC63A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044ABD1322B0C67C00CC63A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044ABD1522B0C67C00CC63A4 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		045048F022C3500A002F7825 /* RegistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
 		047A23ED22BF837300B89632 /* HistoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
 		047A23EF22BF839500B89632 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		0490634B22C5FB240034359E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		81E52902E0147E74E467A1F0 /* Pods-sampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleProject.debug.xcconfig"; path = "Target Support Files/Pods-sampleProject/Pods-sampleProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C76D3FE58D5FD00CA9FEEAF /* Pods-sampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleProject.release.xcconfig"; path = "Target Support Files/Pods-sampleProject/Pods-sampleProject.release.xcconfig"; sourceTree = "<group>"; };
 		B15AF39031C358F6240030E0 /* Pods_sampleProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,16 +71,17 @@
 		044ABD0822B0C67900CC63A4 /* sampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				0490634B22C5FB240034359E /* RecordViewController.swift */,
 				044ABD0922B0C67900CC63A4 /* AppDelegate.swift */,
 				044ABD0B22B0C67900CC63A4 /* CullenderViewController.swift */,
 				044ABD0D22B0C67900CC63A4 /* Main.storyboard */,
 				044ABD1022B0C67C00CC63A4 /* Assets.xcassets */,
 				044ABD1222B0C67C00CC63A4 /* LaunchScreen.storyboard */,
 				044ABD1522B0C67C00CC63A4 /* info.plist */,
-				0421132722BF3F340007E362 /* CullenderViewController.swift */,
 				047A23ED22BF837300B89632 /* HistoryListViewController.swift */,
 				047A23EF22BF839500B89632 /* HistoryViewController.swift */,
 				0421132922BF4E4B0007E362 /* SettingTableViewController.swift */,
+				045048F022C3500A002F7825 /* RegistViewController.swift */,
 			);
 			name = sampleProject;
 			path = sampleProject.swift;
@@ -219,8 +222,9 @@
 				0421132A22BF4E4B0007E362 /* SettingTableViewController.swift in Sources */,
 				047A23EE22BF837300B89632 /* HistoryListViewController.swift in Sources */,
 				044ABD0C22B0C67900CC63A4 /* CullenderViewController.swift in Sources */,
+				0490634C22C5FB240034359E /* RecordViewController.swift in Sources */,
 				047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */,
-				0421132822BF3F340007E362 /* CullenderViewController.swift in Sources */,
+				045048F122C3500A002F7825 /* RegistViewController.swift in Sources */,
 				044ABD0A22B0C67900CC63A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +373,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZS566QADF3;
-				INFOPLIST_FILE = sampleProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/sampleProject.swift/info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,7 +391,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZS566QADF3;
-				INFOPLIST_FILE = sampleProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/sampleProject.swift/info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

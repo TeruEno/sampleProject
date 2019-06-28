@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SettingTableViewController: UITableViewController {
-
+class SettingTableViewController: UITableViewController{
+    @IBOutlet weak var settingTableView: UITableView!
+    
+    let settings = ["ユーザー名変更"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let settings = ["ユーザー名変更"]
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -24,26 +24,26 @@ class SettingTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-//  行数
+//  セクション数を設定する
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
-    }
-
-//  セルの数
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
 
+//  セクション内のセル数を決めるメソッド（必須）
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//         #warning Incomplete implementation, return the number of rows
+        return settings.count
+    }
 
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "userNameEdit", for: indexPath)
-//
-//       Configure; the; cell...
-//
-//        return cell
-//    }
+//  セルのインスタンスを生成するメソッド（必須）
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        対象のセルを取り出す
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//セルのラベルに配列の値を取り出して代入
+        cell.textLabel?.text = settings[indexPath.row]
+        return cell
+    }
 
     /*
     // Override to support conditional editing of the table view.
