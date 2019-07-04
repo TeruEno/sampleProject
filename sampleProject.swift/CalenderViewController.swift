@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CullenderViewController: UIViewController {
+class CalenderViewController: UIViewController {
     @IBOutlet weak var positiveCount: UILabel!
     @IBOutlet weak var negariveCount: UILabel!
     @IBOutlet weak var continueDays: UILabel!
