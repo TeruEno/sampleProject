@@ -28,4 +28,8 @@ class CullenderViewController: UIViewController {
         performSegue(withIdentifier: "toHistoryList", sender: nil)
     }
     
+//    カレンダーをスワイプする処理
+    @IBAction func swipeCalendar(_ sender: Any) {
+        
+    }
 }
