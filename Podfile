@@ -7,4 +7,5 @@ target 'sampleProject' do
 
   # Pods for sampleProject
 	pod 'RealmSwift'
+	pod 'IQKeyboardManagerSwift'
 end
