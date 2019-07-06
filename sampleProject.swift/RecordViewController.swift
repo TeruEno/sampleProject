@@ -30,11 +30,11 @@ class RecordViewController: UIViewController {
     }
     
     @IBAction func didClickRecordBtn(_ sender: Any) {
+        let negativeEvent = negativeTextField.text
+        let positiveEvent = positiveTextField1.text
 //        negativeが入力されていてpositiveが空欄の場合
-//        または、
-//        negativeとpositiveの両方が空欄の場合
-        if negativeTextField.text != "" && positiveTextField1.text == "" && positiveTextField2.text == "" && positiveTextField3.text == "" && positiveTextField4.text == "" || negativeTextField.text == "" && positiveTextField1.text == "" && positiveTextField2.text == ""  && positiveTextField3.text == "" && positiveTextField4.text == "" {
-            let alert = UIAlertController(title: "入力不足", message: "ポジティブランが入力されていません。入力してください。", preferredStyle: .alert)
+        if negativeTextField.text != "" && positiveTextField1.text == "" && positiveTextField2.text == "" && positiveTextField3.text == "" && positiveTextField4.text == "" {
+            let alert = UIAlertController(title: "入力不足", message: "ポジティブ欄が入力されていません。入力してください。", preferredStyle: .alert)
 //            選択肢
             let yesAction = UIAlertAction(title: "OK", style: .default) {
                 (UIAlertAction) in print("OK")
@@ -43,7 +43,22 @@ class RecordViewController: UIViewController {
             alert.addAction(yesAction)
 //                アラートを表示する
             present(alert, animated: true, completion: nil)
-        } else {    //  Realmにデータを保存する
+        } else if negativeTextField.text == "" && positiveTextField1.text == "" && positiveTextField2.text == ""  && positiveTextField3.text == "" && positiveTextField4.text == "" {   //      negativeとpositiveの両方が空欄の場合
+            let alert = UIAlertController(title: "入力不足", message: "ネガティブ欄とポジティブ欄が入力されていません。入力してください。", preferredStyle: .alert)
+            //            選択肢
+            let yesAction = UIAlertAction(title: "OK", style: .default) {
+                (UIAlertAction) in print("OK")
+            }
+            //                選択肢の追加
+            alert.addAction(yesAction)
+            //                アラートを表示する
+            present(alert, animated: true, completion: nil)
+            
+        }     else {    //  Realmにデータを保存する
+//            recordNegativeメソッドを呼び出す
+            recordNegative(with: negativeEvent!)
+//            recordPositiveメソッドを呼び出す
+            recordPositive(with: positiveEvent!)
         }
     }
 
