@@ -10,12 +10,12 @@ import UIKit
 import RealmSwift
 
 class RegistViewController: UIViewController {
-    
-//    対象となるuserをnilで定義
-    var user: User? = nil
-    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userLabel: UILabel!
+    
+    //    対象となるuserをnilで定義
+    var user: User? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +24,11 @@ class RegistViewController: UIViewController {
 
     @IBAction func didClickBtn(_ sender: Any) {
         let userName = userNameTextField.text
-//        テキストフィールドの値が空じゃない場合は遷移する
+//        テキストフィールドの値が空じゃない場合
         if userNameTextField.text != "" {
-            
+//            registUserメソッドを呼び出す
             registUser(with: userName!)
+//            画面遷移
             performSegue(withIdentifier: "toStart", sender: userName)
         } else { // 値が空の場合はアラートを表示する
             let alert = UIAlertController(title: "未入力", message: "ユーザー名が入力されていません", preferredStyle: .alert)
@@ -37,7 +38,7 @@ class RegistViewController: UIViewController {
             }
 //            選択肢の追加
             alert.addAction(yesAction)
-            //        アラートを表示する
+//            アラートを表示する
             present(alert, animated: true, completion: nil)
             
         }
@@ -47,11 +48,12 @@ class RegistViewController: UIViewController {
 
 //  Realmに関する処理
 extension RegistViewController {
-//    UserクラスはUser.swiftで定義
+//    UserクラスはUser.swiftで定義済み
 //    User作成
     func registUser(with name:String) {
 //        Realmに接続
         let realm = try! Realm()
+//        .realmファイルが保存されている場所を表示する
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
 //        登録処理

@@ -485,7 +485,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="RECORD" id="5cG-a8-d5r"/>
                     <connections>
+                        <outlet property="negativeLabel" destination="nxy-Ji-WBW" id="Oi8-r8-cyJ"/>
                         <outlet property="negativeTextField" destination="kB1-Hy-EPS" id="HAi-nS-H7W"/>
+                        <outlet property="positiveLabel" destination="emx-tu-eyq" id="ao3-LX-TxV"/>
                         <outlet property="positiveTextField1" destination="37q-JY-BBw" id="wBv-gr-7zz"/>
                         <outlet property="positiveTextField2" destination="yRk-zC-yAb" id="3to-2g-A54"/>
                         <outlet property="positiveTextField3" destination="Wj2-ab-2Ot" id="EPA-Kj-SiD"/>
@@ -494,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWI-9d-RI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2049" y="-210"/>
+            <point key="canvasLocation" x="-2049.275362318841" y="-210.32608695652175"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="w59-uW-Wz8">
