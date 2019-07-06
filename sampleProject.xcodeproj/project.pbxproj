@@ -14,6 +14,8 @@
 		044ABD1122B0C67C00CC63A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD1022B0C67C00CC63A4 /* Assets.xcassets */; };
 		044ABD1422B0C67C00CC63A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD1222B0C67C00CC63A4 /* LaunchScreen.storyboard */; };
 		045048F122C3500A002F7825 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045048F022C3500A002F7825 /* RegistViewController.swift */; };
+		04528C0A22CF1E5E0052649A /* Negative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0922CF1E5E0052649A /* Negative.swift */; };
+		04528C0C22CF1EDC0052649A /* Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0B22CF1EDC0052649A /* Positive.swift */; };
 		0476014922C9E5A600B90FBE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476014822C9E5A600B90FBE /* SettingViewController.swift */; };
 		047A23EE22BF837300B89632 /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23ED22BF837300B89632 /* HistoryListViewController.swift */; };
 		047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23EF22BF839500B89632 /* HistoryViewController.swift */; };
@@ -31,6 +33,8 @@
 		044ABD1322B0C67C00CC63A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044ABD1522B0C67C00CC63A4 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		045048F022C3500A002F7825 /* RegistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
+		04528C0922CF1E5E0052649A /* Negative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Negative.swift; sourceTree = "<group>"; };
+		04528C0B22CF1EDC0052649A /* Positive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positive.swift; sourceTree = "<group>"; };
 		0476014822C9E5A600B90FBE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = sampleProject.swift/SettingViewController.swift; sourceTree = SOURCE_ROOT; };
 		047A23ED22BF837300B89632 /* HistoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
 		047A23EF22BF839500B89632 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				047A23ED22BF837300B89632 /* HistoryListViewController.swift */,
 				047A23EF22BF839500B89632 /* HistoryViewController.swift */,
 				045048F022C3500A002F7825 /* RegistViewController.swift */,
+				04528C0922CF1E5E0052649A /* Negative.swift */,
+				04528C0B22CF1EDC0052649A /* Positive.swift */,
 				041BA86222CDCDEB00D3780D /* User.swift */,
 			);
 			name = sampleProject;
@@ -223,10 +229,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				047A23EE22BF837300B89632 /* HistoryListViewController.swift in Sources */,
+				04528C0A22CF1E5E0052649A /* Negative.swift in Sources */,
 				044ABD0C22B0C67900CC63A4 /* CalenderViewController.swift in Sources */,
 				0490634C22C5FB240034359E /* RecordViewController.swift in Sources */,
 				047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */,
 				041BA86322CDCDEB00D3780D /* User.swift in Sources */,
+				04528C0C22CF1EDC0052649A /* Positive.swift in Sources */,
 				045048F122C3500A002F7825 /* RegistViewController.swift in Sources */,
 				0476014922C9E5A600B90FBE /* SettingViewController.swift in Sources */,
 				044ABD0A22B0C67900CC63A4 /* AppDelegate.swift in Sources */,
