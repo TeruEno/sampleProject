@@ -42,7 +42,6 @@ class RegistViewController: UIViewController {
             
         }
     }
-    
 }
 
 //  Realmに関する処理
@@ -52,7 +51,8 @@ extension RegistViewController {
     func registUser(with name:String) {
 //        Realmに接続
         let realm = try! Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        realmファイルが保存されている場所をURLで表示
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
 //        登録処理
 //        USERの初期化

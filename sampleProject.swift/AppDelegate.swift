@@ -6,7 +6,14 @@
 //  Copyright © 2019 TeruakiEnomoto. All rights reserved.
 //
 
+//
+//  AppDelegate.swiftはProject作成時に自動的に作成されるファイルの一つ。
+//    アプリ全体のライフタイムイベントを管理するためのクラス
+//    各メソッドが各メソッド名を元にどんな時に呼ばれるのかを予想して記述する
+//
+
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +23,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+//
+//        初回起動画面を動的に切り替える
+//
+
+//        Realmに接続
+        let realm = try! Realm()
+//        Realm内に登録してある一番最初のユーザー情報を取得
+        let user = realm.objects(User.self).first
+        
+//        どのstoryboardを使うか指定する
+        let storybord:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        表示する画面を選択するための箱を作る
+        var  viewController:UIViewController
+        
+        
+//        ユーザーがいない場合サインイン画面に移動
+        if (user == nil) {
+//            サインアップしていない場合
+            viewController = storybord.instantiateViewController(withIdentifier: "signUp") as UIViewController
+        } else {
+//            サインアップ済みの場合
+            viewController = storybord.instantiateViewController(withIdentifier: "navigation") as UIViewController
+            
+        }
+        
+//        一番最初に表示する画面を選択
+        window?.rootViewController = viewController
+        
         return true
     }
 
