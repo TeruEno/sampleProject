@@ -43,7 +43,6 @@ class RegistViewController: UIViewController {
             
         }
     }
-    
 }
 
 //  Realmに関する処理

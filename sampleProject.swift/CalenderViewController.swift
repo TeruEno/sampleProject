@@ -24,9 +24,6 @@ class CalenderViewController: UIViewController {
         performSegue(withIdentifier: "toHistory", sender: nil)
     }
     
-    @IBAction func showHistoryListBtn(_ sender: Any) {
-        performSegue(withIdentifier: "toHistoryList", sender: nil)
-    }
     
 //    カレンダーをスワイプする処理
     @IBAction func swipeCalendar(_ sender: Any) {
