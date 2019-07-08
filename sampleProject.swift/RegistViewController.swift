@@ -51,6 +51,7 @@ extension RegistViewController {
     func registUser(with name:String) {
 //        Realmに接続
         let realm = try! Realm()
+//        realmファイルが保存されている場所をURLで表示
 //        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
 //        登録処理
@@ -71,17 +72,4 @@ extension RegistViewController {
         let realm = try! Realm()
         return (realm.objects(User.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
-    
-
-    //    ログインページをスキップ
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        //        もしユーザー名が保存されているなら
-        let realm = try! Realm()
-        let users = realm.objects(User.self)
-//        if users == Realm  {
-//            performSegue(withIdentifier: "toStart", sender: nil)
-//        }
-    }
-    
 }
