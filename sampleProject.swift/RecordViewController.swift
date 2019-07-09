@@ -83,6 +83,14 @@ class RecordViewController: UIViewController {
             //                アラートを表示する
             present(completeAlert, animated: true, completion: nil)
         }
+        
+//        テキストフィールドの値を初期化
+        negativeTextField.text = ""
+        positiveTextField1.text = ""
+        positiveTextField2.text = ""
+        positiveTextField3.text = ""
+        positiveTextField4.text = ""
+
     }
 
 }
