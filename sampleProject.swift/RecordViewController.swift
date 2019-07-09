@@ -32,8 +32,10 @@ class RecordViewController: UIViewController {
     
     @IBAction func didClickRecordBtn(_ sender: Any) {
         let negativeEvent = negativeTextField.text
-        let positiveEvent = positiveTextField1.text
+        let positiveEvent1 = positiveTextField1.text
         let positiveEvent2 = positiveTextField2.text
+        let positiveEvent3 = positiveTextField3.text
+        let positiveEvent4 = positiveTextField4.text
 //        negativeが入力されていてpositiveが空欄の場合
         if negativeTextField.text != "" && positiveTextField1.text == "" && positiveTextField2.text == "" && positiveTextField3.text == "" && positiveTextField4.text == "" {
             let alert = UIAlertController(title: "入力不足", message: "ポジティブ欄が入力されていません。入力してください。", preferredStyle: .alert)
@@ -56,11 +58,20 @@ class RecordViewController: UIViewController {
             //                アラートを表示する
             present(alert, animated: true, completion: nil)
             
-        }     else {    //  Realmにデータを保存する
+        } else {    //  Realmにデータを保存する
 //            recordNegativeメソッドを呼び出す
             recordNegative(with: negativeEvent!)
 //            recordPositiveメソッドを呼び出す
-            recordPositive(with: positiveEvent)
+            recordPositive(with: positiveEvent1!)
+            if positiveTextField2.text != "" {
+                recordPositive(with: positiveEvent2!)
+            }
+            if positiveTextField3.text != "" {
+                recordPositive(with: positiveEvent3!)
+            }
+            if positiveTextField4.text != "" {
+                recordPositive(with: positiveEvent4!)
+            }
 //            入力完了のアラート
             let completeAlert = UIAlertController(title: "入力完了", message: "おめでとうございます。記録できましたね!!", preferredStyle: .alert)
             //            選択肢
