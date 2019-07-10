@@ -52,7 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        一番最初に表示する画面を選択
         window?.rootViewController = viewController
-        
+//        何秒表示するか
+        sleep(3)
         return true
     }
 

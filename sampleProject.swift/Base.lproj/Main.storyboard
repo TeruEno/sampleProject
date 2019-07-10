@@ -379,12 +379,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.92549019607843142" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="Bbj-NT-vHU"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="gPZ-EJ-tPF" appends="YES" id="uU1-Dy-F6D"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="CALENDAR" id="JZT-YZ-jrR"/>
                     <navigationItem key="navigationItem" title="ユーザー名" id="a5k-fx-IGa"/>
@@ -397,11 +394,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9u-RD-Vrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="gPZ-EJ-tPF">
-                    <connections>
-                        <action selector="swipeCulendar:" destination="LXz-Jb-DE3" id="sAR-iB-2TM"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-859.4202898550725" y="584.51086956521749"/>
         </scene>
@@ -471,7 +463,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="QcE-rS-Pww"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="RECORD" id="5cG-a8-d5r"/>
@@ -497,7 +489,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UVZ-XV-wV7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.86274509803921573" blue="0.23529411764705882" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="XaL-TP-5ez" kind="relationship" relationship="viewControllers" id="9uu-JY-uey"/>
@@ -549,7 +541,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="h0g-Is-lLY" firstAttribute="top" secondItem="Fbp-kB-yqu" secondAttribute="bottom" constant="63" id="7Eq-bc-RgB"/>
                             <constraint firstItem="h0g-Is-lLY" firstAttribute="centerY" secondItem="xRS-Ff-zpW" secondAttribute="centerY" id="GWW-iY-G6r"/>
@@ -602,7 +594,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uGg-gw-Kuc" firstAttribute="centerX" secondItem="ZMN-L4-jGn" secondAttribute="centerX" id="T1U-PG-Gda"/>
                             <constraint firstItem="uGg-gw-Kuc" firstAttribute="top" secondItem="yO6-MM-CiV" secondAttribute="bottom" constant="54" id="aPQ-3j-Qjf"/>
@@ -642,7 +634,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.92549019607843142" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RGo-AP-Pt4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="SETTING" id="V8c-Mr-w3n"/>
@@ -714,7 +706,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="rMf-og-kb4"/>
                     </view>
                     <navigationItem key="navigationItem" title="History" id="Ij7-yP-WBF"/>
@@ -736,6 +728,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Ok-Hb-i65">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.15686274509803921" green="0.86274509803921573" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="iXW-p1-z3D" kind="relationship" relationship="rootViewController" id="hxP-nP-7Qf"/>
@@ -785,7 +778,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.92549019607843142" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6p5-V3-wxP" firstAttribute="centerY" secondItem="uoj-4T-xZP" secondAttribute="centerY" id="EhO-uZ-MgO"/>
                             <constraint firstItem="6p5-V3-wxP" firstAttribute="centerX" secondItem="uoj-4T-xZP" secondAttribute="centerX" id="M8p-tG-OMY"/>
@@ -808,6 +801,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ncy-aw-aua"/>
+        <segue reference="jhO-ym-HGu"/>
     </inferredMetricsTieBreakers>
 </document>
