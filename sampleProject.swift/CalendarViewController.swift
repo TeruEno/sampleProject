@@ -19,11 +19,14 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     @IBOutlet weak var recordDays: UILabel!
     
     
-    var positives: [Positives] = []
-    var negatives: [Negatives] = []
+    var positives: Positives? = nil
+    var negatives: Negatives? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let positiveThings = positivesCountLabel.text
+        getPositives(with: positiveThings!)
     }
 
 
@@ -43,13 +46,13 @@ extension CalendarViewController {
 extension CalendarViewController {
     
 //    全てのポジティブデータを取得する
-    func getPositives(with positive:Int) {
+    func getPositives(with positive:String) {
 //          Realmに接続する
         let realm = try! Realm()
 //        ポジティブの個数を取得する
-        let results = realm.objects(Positives.self)
-        var positives = results.count
-        
+        let resultPositives = realm.objects(Positives.self)
+        print(resultPositives.count)
+        positivesCountLabel.text = String(resultPositives.count)
     }
     
 }
