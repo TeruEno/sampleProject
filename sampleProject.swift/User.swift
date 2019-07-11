@@ -6,6 +6,8 @@
 //  Copyright © 2019 TeruakiEnomoto. All rights reserved.
 //
 
+import UIKit
+import Realm
 import RealmSwift
 
 // Realmではテーブル定義をオブジェクト定義を行う

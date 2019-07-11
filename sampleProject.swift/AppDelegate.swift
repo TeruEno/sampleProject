@@ -13,6 +13,7 @@
 //
 
 import UIKit
+import Realm
 import RealmSwift
 
 @UIApplicationMain
@@ -33,13 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
 //        Realm内に登録してある一番最初のユーザー情報を取得
         let user = realm.objects(User.self).first
-        
+//        .realmファイルが保存されている場所を表示する
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
 //        どのstoryboardを使うか指定する
         let storybord:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //        表示する画面を選択するための箱を作る
         var  viewController:UIViewController
-        
-        
+
 //        ユーザーがいない場合サインイン画面に移動
         if (user == nil) {
 //            サインアップしていない場合
@@ -47,11 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
 //            サインアップ済みの場合
             viewController = storybord.instantiateViewController(withIdentifier: "navigation") as UIViewController
-            
+
         }
         
 //        一番最初に表示する画面を選択
         window?.rootViewController = viewController
+        
 //        何秒表示するか
         sleep(3)
         return true
