@@ -12,14 +12,14 @@ import RealmSwift
 class RegistViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userLabel: UILabel!
-    
+
     //    対象となるuserをnilで定義
     var user: User? = nil
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
 
     @IBAction func didClickBtn(_ sender: Any) {
@@ -40,7 +40,7 @@ class RegistViewController: UIViewController {
             alert.addAction(yesAction)
 //            アラートを表示する
             present(alert, animated: true, completion: nil)
-            
+
         }
     }
 }
@@ -54,23 +54,25 @@ extension RegistViewController {
         let realm = try! Realm()
 //        .realmファイルが保存されている場所を表示する
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        
+
 //        登録処理
 //        USERの初期化
         user = User()
         user?.id = getMaxId()
         user?.name = name
         user?.date = Date()
-        
+
 //        Realmに書き込み
         try! realm.write{   // Realmの書き込みモード
             realm.add(user!)    // DBに追加
         }
     }
-    
+
 //    getMaxId
     func getMaxId() -> Int {
         let realm = try! Realm()
         return (realm.objects(User.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
 }
+
+

@@ -19,15 +19,13 @@ class RecordViewController: UIViewController {
     @IBOutlet weak var positiveTextField4: UITextField!
     
 //    対象となるnegativeをnilで定義
-    var negative: Negative? = nil
+    var negatives: Negatives? = nil
 //    対象となるpositiveをnilで定義
-    var positive: Positive? = nil
+    var positives: Positives? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        .realmファイルが保存されている場所を表示する
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     @IBAction func didClickRecordBtn(_ sender: Any) {
@@ -104,20 +102,20 @@ extension RecordViewController {
         let realm = try! Realm()
 //        登録処理
 //        Negativeの初期化
-        negative = Negative()
-        negative?.id = getNegativeMaxId()
-        negative?.negativeText = text
-        negative?.date = Date()
+        negatives = Negatives()
+        negatives?.id = getNegativeMaxId()
+        negatives?.negativeText = text
+        negatives?.date = Date()
         
 //        Realmに書き込み
         try! realm.write {      //  Realmに書き込みモード
-            realm.add(negative!)        //  DBに追加
+            realm.add(negatives!)        //  DBに追加
         }
     }
 //        getNegativeMaxId
     func getNegativeMaxId() -> Int {
         let realm = try! Realm()
-        return (realm.objects(Negative.self).max(ofProperty:"id")as Int? ?? 0) + 1
+        return (realm.objects(Negatives.self).max(ofProperty:"id")as Int? ?? 0) + 1
     }
     
     
@@ -128,18 +126,18 @@ extension RecordViewController {
         let realm = try! Realm()
 //        登録処理
 //        Positiveの初期化
-        positive = Positive()
-        positive?.id = getPositiveMaxId()
-        positive?.positiveText = text
-        positive?.date = Date()
+        positives = Positives()
+        positives?.id = getPositiveMaxId()
+        positives?.positiveText = text
+        positives?.date = Date()
 //        Realmに書き込み
         try! realm.write{       //  Realmの書き込みモード
-            realm.add(positive!)        //  DBに追加
+            realm.add(positives!)        //  DBに追加
         }
     }
 //    getPositiveMaxId
     func getPositiveMaxId() -> Int {
         let realm = try! Realm()
-        return (realm.objects(Positive.self).max(ofProperty: "id") as Int? ?? 0) + 1
+        return (realm.objects(Positives.self).max(ofProperty: "id") as Int? ?? 0) + 1
     }
 }

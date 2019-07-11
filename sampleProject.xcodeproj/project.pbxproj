@@ -9,15 +9,14 @@
 /* Begin PBXBuildFile section */
 		041BA86322CDCDEB00D3780D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA86222CDCDEB00D3780D /* User.swift */; };
 		044ABD0A22B0C67900CC63A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ABD0922B0C67900CC63A4 /* AppDelegate.swift */; };
-		044ABD0C22B0C67900CC63A4 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ABD0B22B0C67900CC63A4 /* CalenderViewController.swift */; };
+		044ABD0C22B0C67900CC63A4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ABD0B22B0C67900CC63A4 /* CalendarViewController.swift */; };
 		044ABD0F22B0C67900CC63A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD0D22B0C67900CC63A4 /* Main.storyboard */; };
 		044ABD1122B0C67C00CC63A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD1022B0C67C00CC63A4 /* Assets.xcassets */; };
 		044ABD1422B0C67C00CC63A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044ABD1222B0C67C00CC63A4 /* LaunchScreen.storyboard */; };
 		045048F122C3500A002F7825 /* RegistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045048F022C3500A002F7825 /* RegistViewController.swift */; };
-		04528C0A22CF1E5E0052649A /* Negative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0922CF1E5E0052649A /* Negative.swift */; };
-		04528C0C22CF1EDC0052649A /* Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0B22CF1EDC0052649A /* Positive.swift */; };
+		04528C0A22CF1E5E0052649A /* Negatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0922CF1E5E0052649A /* Negatives.swift */; };
+		04528C0C22CF1EDC0052649A /* Positives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0B22CF1EDC0052649A /* Positives.swift */; };
 		0476014922C9E5A600B90FBE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476014822C9E5A600B90FBE /* SettingViewController.swift */; };
-		047A23EE22BF837300B89632 /* HistoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23ED22BF837300B89632 /* HistoryListViewController.swift */; };
 		047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23EF22BF839500B89632 /* HistoryViewController.swift */; };
 		0490634C22C5FB240034359E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490634B22C5FB240034359E /* RecordViewController.swift */; };
 		6F0791472E19E4422CC5E1ED /* Pods_sampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15AF39031C358F6240030E0 /* Pods_sampleProject.framework */; };
@@ -27,16 +26,15 @@
 		041BA86222CDCDEB00D3780D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		044ABD0622B0C67900CC63A4 /* sampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044ABD0922B0C67900CC63A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		044ABD0B22B0C67900CC63A4 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		044ABD0B22B0C67900CC63A4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		044ABD0E22B0C67900CC63A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		044ABD1022B0C67C00CC63A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		044ABD1322B0C67C00CC63A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		044ABD1522B0C67C00CC63A4 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		045048F022C3500A002F7825 /* RegistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistViewController.swift; sourceTree = "<group>"; };
-		04528C0922CF1E5E0052649A /* Negative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Negative.swift; sourceTree = "<group>"; };
-		04528C0B22CF1EDC0052649A /* Positive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positive.swift; sourceTree = "<group>"; };
+		04528C0922CF1E5E0052649A /* Negatives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Negatives.swift; sourceTree = "<group>"; };
+		04528C0B22CF1EDC0052649A /* Positives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positives.swift; sourceTree = "<group>"; };
 		0476014822C9E5A600B90FBE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = sampleProject.swift/SettingViewController.swift; sourceTree = SOURCE_ROOT; };
-		047A23ED22BF837300B89632 /* HistoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListViewController.swift; sourceTree = "<group>"; };
 		047A23EF22BF839500B89632 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		0490634B22C5FB240034359E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		81E52902E0147E74E467A1F0 /* Pods-sampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleProject.debug.xcconfig"; path = "Target Support Files/Pods-sampleProject/Pods-sampleProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,17 +77,16 @@
 			children = (
 				0490634B22C5FB240034359E /* RecordViewController.swift */,
 				044ABD0922B0C67900CC63A4 /* AppDelegate.swift */,
-				044ABD0B22B0C67900CC63A4 /* CalenderViewController.swift */,
+				044ABD0B22B0C67900CC63A4 /* CalendarViewController.swift */,
 				044ABD0D22B0C67900CC63A4 /* Main.storyboard */,
 				0476014822C9E5A600B90FBE /* SettingViewController.swift */,
 				044ABD1022B0C67C00CC63A4 /* Assets.xcassets */,
 				044ABD1222B0C67C00CC63A4 /* LaunchScreen.storyboard */,
 				044ABD1522B0C67C00CC63A4 /* info.plist */,
-				047A23ED22BF837300B89632 /* HistoryListViewController.swift */,
 				047A23EF22BF839500B89632 /* HistoryViewController.swift */,
 				045048F022C3500A002F7825 /* RegistViewController.swift */,
-				04528C0922CF1E5E0052649A /* Negative.swift */,
-				04528C0B22CF1EDC0052649A /* Positive.swift */,
+				04528C0922CF1E5E0052649A /* Negatives.swift */,
+				04528C0B22CF1EDC0052649A /* Positives.swift */,
 				041BA86222CDCDEB00D3780D /* User.swift */,
 			);
 			name = sampleProject;
@@ -228,13 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				047A23EE22BF837300B89632 /* HistoryListViewController.swift in Sources */,
-				04528C0A22CF1E5E0052649A /* Negative.swift in Sources */,
-				044ABD0C22B0C67900CC63A4 /* CalenderViewController.swift in Sources */,
+				04528C0A22CF1E5E0052649A /* Negatives.swift in Sources */,
+				044ABD0C22B0C67900CC63A4 /* CalendarViewController.swift in Sources */,
 				0490634C22C5FB240034359E /* RecordViewController.swift in Sources */,
 				047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */,
 				041BA86322CDCDEB00D3780D /* User.swift in Sources */,
-				04528C0C22CF1EDC0052649A /* Positive.swift in Sources */,
+				04528C0C22CF1EDC0052649A /* Positives.swift in Sources */,
 				045048F122C3500A002F7825 /* RegistViewController.swift in Sources */,
 				0476014922C9E5A600B90FBE /* SettingViewController.swift in Sources */,
 				044ABD0A22B0C67900CC63A4 /* AppDelegate.swift in Sources */,
