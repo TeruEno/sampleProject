@@ -14,6 +14,14 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var textFieldPositive3: UITextField!
     @IBOutlet weak var textFieldNegative: UITextField!
     
+    
+    var date: String! // 受け皿の用意
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        dateLabel.text = date // Labelに日付を表示
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
