@@ -20,5 +20,6 @@ class Negatives: Object {
     @objc dynamic var id: Int = Int()
     @objc dynamic var negativeText:String = String()
     @objc dynamic var date:Date = Date()
-   
+    @objc dynamic var continueRecordDays: Int = Int()
+    @objc dynamic var totalRecordDays: Int = Int()
 }

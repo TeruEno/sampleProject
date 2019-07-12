@@ -231,9 +231,6 @@
                                     <constraint firstAttribute="height" constant="30" id="eFv-oK-ghq"/>
                                 </constraints>
                                 <state key="normal" title="完了"/>
-                                <connections>
-                                    <segue destination="EcN-cC-PiR" kind="show" id="ncy-aw-aua"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名編集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-kB-yqu">
                                 <rect key="frame" x="146" y="269" width="122" height="21"/>
@@ -261,59 +258,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHe-Op-5dK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1284.0579710144928" y="1400.5434782608697"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="3Zc-Dz-ffs">
-            <objects>
-                <viewController id="hqS-bV-BOt" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZMN-L4-jGn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yO6-MM-CiV">
-                                <rect key="frame" x="57" y="353" width="300" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Km7-fl-wmE"/>
-                                    <constraint firstAttribute="width" constant="300" id="QIw-IY-ja8"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-gw-Kuc">
-                                <rect key="frame" x="191.66666666666666" y="437" width="31" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="31" id="Lf8-zw-MD0"/>
-                                    <constraint firstAttribute="height" constant="30" id="upc-BL-PuE"/>
-                                </constraints>
-                                <state key="normal" title="完了"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスコード編集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8zB-DN-dPf">
-                                <rect key="frame" x="146" y="269" width="122" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="2jp-4U-k0Y"/>
-                                    <constraint firstAttribute="width" constant="122" id="tIb-ow-yJo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="uGg-gw-Kuc" firstAttribute="centerX" secondItem="ZMN-L4-jGn" secondAttribute="centerX" id="T1U-PG-Gda"/>
-                            <constraint firstItem="uGg-gw-Kuc" firstAttribute="top" secondItem="yO6-MM-CiV" secondAttribute="bottom" constant="54" id="aPQ-3j-Qjf"/>
-                            <constraint firstItem="yO6-MM-CiV" firstAttribute="centerY" secondItem="ZMN-L4-jGn" secondAttribute="centerY" id="bBc-pY-5hO"/>
-                            <constraint firstItem="yO6-MM-CiV" firstAttribute="centerX" secondItem="ZMN-L4-jGn" secondAttribute="centerX" id="dQ9-vS-zpX"/>
-                            <constraint firstItem="8zB-DN-dPf" firstAttribute="centerX" secondItem="ZMN-L4-jGn" secondAttribute="centerX" id="rmC-fY-4AV"/>
-                            <constraint firstItem="yO6-MM-CiV" firstAttribute="top" secondItem="8zB-DN-dPf" secondAttribute="bottom" constant="63" id="zlH-gk-I6G"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="0Bt-Jj-jcz"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oee-G6-yKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1278" y="2126"/>
         </scene>
         <!--SETTING-->
         <scene sceneID="rOg-4p-X7q">
@@ -346,7 +290,6 @@
                     <connections>
                         <outlet property="settingTableView" destination="pHz-d0-Psy" id="1OE-us-flw"/>
                         <segue destination="d2D-J3-wJB" kind="show" identifier="toUser'sName" id="Gx2-mw-Lbv"/>
-                        <segue destination="hqS-bV-BOt" kind="show" identifier="toPasscode" id="Rc9-UY-5Mn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq2-s5-O53" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -504,7 +447,4 @@
             <point key="canvasLocation" x="-3612" y="585"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ncy-aw-aua"/>
-    </inferredMetricsTieBreakers>
 </document>
