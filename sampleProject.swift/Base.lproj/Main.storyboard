@@ -75,7 +75,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqO-ZR-LU0" customClass="FSCalendar">
-                                <rect key="frame" x="70" y="339" width="261" height="270"/>
+                                <rect key="frame" x="70" y="339" width="261" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -91,10 +91,10 @@
                     <tabBarItem key="tabBarItem" title="CALENDAR" id="JZT-YZ-jrR"/>
                     <navigationItem key="navigationItem" title="Title" id="Ko0-4v-gm6" userLabel="UserName"/>
                     <connections>
-                        <outlet property="continueDays" destination="cd2-dq-nim" id="juM-BE-KS9"/>
+                        <outlet property="continueRecordDays" destination="cd2-dq-nim" id="zPm-rl-18s"/>
                         <outlet property="negativesCountLabel" destination="W4w-mg-DOf" id="HQr-L2-hgk"/>
                         <outlet property="positivesCountLabel" destination="e04-P4-zMr" id="T63-fE-xC7"/>
-                        <outlet property="recordDays" destination="TSv-uj-Rqa" id="GbT-qt-qhS"/>
+                        <outlet property="totalRecordDays" destination="TSv-uj-Rqa" id="hg7-Dw-w3e"/>
                         <segue destination="Ot5-Lz-m2H" kind="show" identifier="toHistory" id="ZaS-7w-nha"/>
                     </connections>
                 </viewController>

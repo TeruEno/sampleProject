@@ -19,6 +19,7 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func loadView() {
         super.loadView()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -18,6 +18,4 @@ class Positives: Object {
     @objc dynamic var id: Int = Int()
     @objc dynamic var positiveText: String = String()
     @objc dynamic var date: Date = Date()
-    @objc dynamic var continueRecordDays: Int = Int()
-    @objc dynamic var totalRecordDays: Int = Int()
 }
