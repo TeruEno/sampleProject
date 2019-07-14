@@ -8,7 +8,6 @@
 
 import UIKit
 import FSCalendar
-import Realm
 import RealmSwift
 
 class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {

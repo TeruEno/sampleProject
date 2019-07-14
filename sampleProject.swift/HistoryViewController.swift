@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HistoryViewController: UIViewController {
     @IBOutlet weak var textFieldPositive1: UITextField!
