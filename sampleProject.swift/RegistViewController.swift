@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class RegistViewController: UIViewController {
+    
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userLabel: UILabel!
     

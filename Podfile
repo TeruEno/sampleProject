@@ -9,4 +9,5 @@ target 'sampleProject' do
 	pod 'RealmSwift'
 	pod 'IQKeyboardManagerSwift'
 	pod 'FSCalendar'
+	pod 'IQKeyboardManager'
 end

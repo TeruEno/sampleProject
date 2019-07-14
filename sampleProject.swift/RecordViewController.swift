@@ -71,7 +71,7 @@ class RecordViewController: UIViewController {
                 recordPositive(with: positiveEvent4!)
             }
             //            入力完了のアラート
-            let completeAlert = UIAlertController(title: "入力完了", message: "おめでとうございます。記録できましたね!!", preferredStyle: .alert)
+            let completeAlert = UIAlertController(title: "記録完了", message: "おめでとうございます。記録できましたね!!", preferredStyle: .alert)
             //            選択肢
             let completeAction = UIAlertAction(title: "OK", style: .default) {
                 (UIAlertAction) in print("OK")
@@ -110,7 +110,7 @@ extension RecordViewController {
         //        Realmに書き込み
         try! realm.write {      //  Realmに書き込みモード
             realm.add(negatives!)        //  DBに追加
-        }
+            }
     }
     //        getNegativeMaxId
     func getNegativeMaxId() -> Int {
@@ -125,16 +125,17 @@ extension RecordViewController {
         //        Realmに接続
         let realm = try! Realm()
         //        登録処理
-        //        Positiveの初期化
+//                Positiveの初期化
         positives = Positives()
         positives?.id = getPositiveMaxId()
         positives?.positiveText = text
         positives?.date = Date()
         //        Realmに書き込み
-        try! realm.write{       //  Realmの書き込みモード
-            realm.add(positives!)        //  DBに追加
+            try! realm.write{       //  Realmの書き込みモード
+                realm.add(positives!)        //  DBに追加
+            }
         }
-    }
+    
     //    getPositiveMaxId
     func getPositiveMaxId() -> Int {
         let realm = try! Realm()

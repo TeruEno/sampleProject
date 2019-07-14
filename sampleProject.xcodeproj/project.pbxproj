@@ -18,6 +18,7 @@
 		04528C0C22CF1EDC0052649A /* Positives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0B22CF1EDC0052649A /* Positives.swift */; };
 		0476014922C9E5A600B90FBE /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0476014822C9E5A600B90FBE /* SettingViewController.swift */; };
 		047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23EF22BF839500B89632 /* HistoryViewController.swift */; };
+		0485ACA122D9CE6800990613 /* RecordDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485ACA022D9CE6800990613 /* RecordDays.swift */; };
 		0490634C22C5FB240034359E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490634B22C5FB240034359E /* RecordViewController.swift */; };
 		6F0791472E19E4422CC5E1ED /* Pods_sampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15AF39031C358F6240030E0 /* Pods_sampleProject.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		04528C0B22CF1EDC0052649A /* Positives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positives.swift; sourceTree = "<group>"; };
 		0476014822C9E5A600B90FBE /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = sampleProject.swift/SettingViewController.swift; sourceTree = SOURCE_ROOT; };
 		047A23EF22BF839500B89632 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		0485ACA022D9CE6800990613 /* RecordDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDays.swift; sourceTree = "<group>"; };
 		0490634B22C5FB240034359E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		81E52902E0147E74E467A1F0 /* Pods-sampleProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleProject.debug.xcconfig"; path = "Target Support Files/Pods-sampleProject/Pods-sampleProject.debug.xcconfig"; sourceTree = "<group>"; };
 		9C76D3FE58D5FD00CA9FEEAF /* Pods-sampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleProject.release.xcconfig"; path = "Target Support Files/Pods-sampleProject/Pods-sampleProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0490634B22C5FB240034359E /* RecordViewController.swift */,
+				0485ACA022D9CE6800990613 /* RecordDays.swift */,
 				044ABD0922B0C67900CC63A4 /* AppDelegate.swift */,
 				044ABD0B22B0C67900CC63A4 /* CalendarViewController.swift */,
 				044ABD0D22B0C67900CC63A4 /* Main.storyboard */,
@@ -230,6 +233,7 @@
 				0490634C22C5FB240034359E /* RecordViewController.swift in Sources */,
 				047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */,
 				041BA86322CDCDEB00D3780D /* User.swift in Sources */,
+				0485ACA122D9CE6800990613 /* RecordDays.swift in Sources */,
 				04528C0C22CF1EDC0052649A /* Positives.swift in Sources */,
 				045048F122C3500A002F7825 /* RegistViewController.swift in Sources */,
 				0476014922C9E5A600B90FBE /* SettingViewController.swift in Sources */,
