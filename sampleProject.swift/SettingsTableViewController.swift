@@ -13,9 +13,8 @@ class SettingsTableViewController: UITableViewController {
     //    各設定のタイトル
     let settings: [String] = ["設定","プッシュ通知", "その他"]
     //    各タイトルの中のセル
-    let users = ["user's name"]
-    let others = ["このアプリを評価する", "お問い合わせ", "プライバシーポリシー"]
-    //    let notification
+    let users:[String] = ["日記名"]
+    let others:[String] = ["このアプリを評価する", "お問い合わせ", "プライバシーポリシー"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,11 +96,7 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(users[indexPath.row])
         //        セルの選択を解除
-//        settingsTableView.deselectRow(at: indexPath as IndexPath, animated: true)
-//        if users[indexPath.row] == "user's name" {
-//            performSegue(withIdentifier: "toUser'sName", sender: nil)
-//        } else {
-//
-//        }
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+//        Switch文でsettingsの中身によって変更
     }
 }
