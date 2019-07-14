@@ -10,7 +10,7 @@ import RealmSwift
 
 //  Realmではテーブル定義をオブジェクト定義で行う
 class Positive: Object {
-//    カラムの定義　兼　メンバ変数の定義
+    //    カラムの定義　兼　メンバ変数の定義
     @objc dynamic var id: Int = Int()
     @objc dynamic var positiveText: String = String()
     @objc dynamic var date: Date = Date()

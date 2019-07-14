@@ -16,7 +16,7 @@ class CalenderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -25,7 +25,7 @@ class CalenderViewController: UIViewController {
     }
     
     
-//    カレンダーをスワイプする処理
+    //    カレンダーをスワイプする処理
     @IBAction func swipeCalendar(_ sender: Any) {
         
     }
