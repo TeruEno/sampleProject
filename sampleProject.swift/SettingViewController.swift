@@ -12,8 +12,12 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var settingTableView: UITableView!
     
-    let settings: [String] = ["設定", "その他"]
+//    各設定のタイトル
+    let settings: [String] = ["設定","プッシュ通知", "その他"]
+//    各タイトルの中のセル
     let users = ["user's name", "passcode"]
+    let others = ["お問い合わせ", "プライバシーポリシー", "このアプリを評価する"]
+//    let notification
     
     
     override func loadView() {
