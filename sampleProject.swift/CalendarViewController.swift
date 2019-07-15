@@ -35,6 +35,10 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         getPositives(with: positiveThings!)
         //        getNegativesメソッドを呼び出す
         getNegatives(with: negativeThings!)
+        
+        
+        
+
     }
     
     
@@ -69,9 +73,24 @@ extension CalendarViewController {
         let realm = try! Realm()
         //        ポジティブの個数を取得する
         let resultPositives = realm.objects(Positives.self)
-        print(resultPositives.count)
         positivesCountLabel.text = String(resultPositives.count)
-        //        ポジティブが記録されている日数を取得する
+        
+
+//        日付の形を定義するための定数を定義する
+        let formatter = DateFormatter()
+//        "yyyy/MM/dd"の形にするための宣言
+        formatter.dateFormat = "yyyy/MM/dd"
+//        記録されているPositivesの日付を取得して変数に入れる
+//        変数定義
+        var recordDays: [String] = []
+//        同じ日付が変数に入っていなければ、入れない
+        for positive in resultPositives {
+            if !recordDays.contains(formatter.string(from: positive.date))  {
+                recordDays.append(formatter.string(from: positive.date))
+            }
+        }
+//        合計記録日数のラベルに代入
+        totalRecordDays.text = String(recordDays.count)
         
     }
     
@@ -81,7 +100,7 @@ extension CalendarViewController {
         let realm = try! Realm()
         //        ネガティブの個数を取得する
         let resultNegatives = realm.objects(Negatives.self)
-        print(resultNegatives.count)
+//        Negativesのラベルにネガティブの個数を代入
         negativesCountLabel.text = String(resultNegatives.count)
     }
     

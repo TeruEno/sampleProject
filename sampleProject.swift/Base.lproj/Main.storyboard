@@ -90,7 +90,7 @@
                         <viewLayoutGuide key="safeArea" id="Bbj-NT-vHU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="CALENDAR" id="JZT-YZ-jrR"/>
-                    <navigationItem key="navigationItem" title="Title" id="Ko0-4v-gm6" userLabel="UserName"/>
+                    <navigationItem key="navigationItem" title="ユーザー名" id="Ko0-4v-gm6" userLabel="UserName"/>
                     <connections>
                         <outlet property="continueRecordDays" destination="cd2-dq-nim" id="zPm-rl-18s"/>
                         <outlet property="negativesCountLabel" destination="W4w-mg-DOf" id="HQr-L2-hgk"/>
@@ -195,7 +195,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UVZ-XV-wV7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.15686274509803921" green="0.86274509803921573" blue="0.23529411764705882" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="XaL-TP-5ez" kind="relationship" relationship="viewControllers" id="9uu-JY-uey"/>
@@ -372,6 +371,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0Ok-Hb-i65">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="iXW-p1-z3D" kind="relationship" relationship="rootViewController" id="hxP-nP-7Qf"/>
