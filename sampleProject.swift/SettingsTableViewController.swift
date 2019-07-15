@@ -11,10 +11,10 @@ import RealmSwift
 class SettingsTableViewController: UITableViewController {
     
     //    各設定のタイトル
-    let settings: [String] = ["設定","プッシュ通知", "その他"]
+    var sections: [String] = ["ユーザー設定", "その他"]
     //    各タイトルの中のセル
     let users:[String] = ["日記名"]
-    let others:[String] = ["このアプリを評価する", "お問い合わせ", "プライバシーポリシー"]
+    let others:[String] = ["このアプリを評価する", "ご意見はこちら", "プライバシーポリシー"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class SettingsTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return settings.count
+        return sections.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,20 +36,28 @@ class SettingsTableViewController: UITableViewController {
         return users.count
     }
     
+    //    セクションのヘッダーにタイトルを設定する
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        //        sectionsの中身を表示する
+        return sections[section]
+    }
+    
     //    セルに表示する内容を設定（セルのインスタンスを生成するメソッド）
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //        対象のセルを取り出す
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsTableViewCell", for: indexPath)
         //        セルのラベルに配列の値を取り出して代入
-        cell.textLabel?.text = users[indexPath.row]
-        return cell
+//        switch sections {
+//        case "ユーザー設定" :
+//            cell.textLabel?.text = users[indexPath.row]
+//        default:
+            cell.textLabel?.text = others[indexPath.row]
+//        }
+            return cell
     }
+
     
-    //    //        セクションのタイトルを設定するメソッド
-    //    func tableView(_tableView: UITableView, titleForHeaderInSection: Int) -> String? {
-    //        return "\(settings[0])"
-    //    }
-    /*
+    /* // TableViewの条件付き編集をサポートする
      // Override to support conditional editing of the table view.
      override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
      // Return false if you do not want the specified item to be editable.
@@ -57,7 +65,7 @@ class SettingsTableViewController: UITableViewController {
      }
      */
     
-    /*
+    /* // TableViewの編集をサポートする
      // Override to support editing the table view.
      override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
      if editingStyle == .delete {
@@ -69,13 +77,13 @@ class SettingsTableViewController: UITableViewController {
      }
      */
     
-    /*
+    /* // TableViewの並び替えをサポートする
      // Override to support rearranging the table view.
      override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
      }
      */
     
-    /*
+    /* // TableViewの条件付き再配置をサポートする
      // Override to support conditional rearranging of the table view.
      override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
      // Return false if you do not want the item to be re-orderable.
