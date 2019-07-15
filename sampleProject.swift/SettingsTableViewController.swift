@@ -97,6 +97,8 @@ class SettingsTableViewController: UITableViewController {
         print(users[indexPath.row])
         //        セルの選択を解除
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-//        Switch文でsettingsの中身によって変更
+        //        Switch文でsettingsの中身によって変更
     }
 }
+
+

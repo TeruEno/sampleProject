@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import IQKeyboardManagerSwift
 
 class RecordViewController: UIViewController {
     @IBOutlet weak var negativeLabel: UILabel!
