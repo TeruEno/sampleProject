@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import RealmSwift
 import IQKeyboardManagerSwift
 
 class DiarySettingsViewController: UIViewController {
-
+    @IBOutlet weak var diaryLabel: UILabel!
+    @IBOutlet weak var diaryNameTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func didClickBtn(_ sender: Any) {
     }
     
 

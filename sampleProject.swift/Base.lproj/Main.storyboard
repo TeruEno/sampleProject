@@ -263,6 +263,9 @@
                                     <constraint firstAttribute="height" constant="30" id="eFv-oK-ghq"/>
                                 </constraints>
                                 <state key="normal" title="完了"/>
+                                <connections>
+                                    <action selector="didClickBtn:" destination="d2D-J3-wJB" eventType="touchUpInside" id="zdi-Kh-iZy"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日記名編集" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-kB-yqu">
                                 <rect key="frame" x="146" y="269" width="122" height="21"/>
@@ -286,6 +289,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Ae-3V-7Al"/>
                     </view>
+                    <connections>
+                        <outlet property="diaryLabel" destination="Fbp-kB-yqu" id="WBn-zK-Jwq"/>
+                        <outlet property="diaryNameTextField" destination="h0g-Is-lLY" id="TIN-Ns-olw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHe-Op-5dK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
