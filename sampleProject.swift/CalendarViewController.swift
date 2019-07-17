@@ -61,27 +61,27 @@ extension CalendarViewController {
         let realm = try! Realm()
         //        Positivesの全てを並び替えて取得する
         let resultPositives = realm.objects(Positives.self).sorted(byKeyPath: "date", ascending: true)
-//        取得したPositivesの数をカウントして代入
+        //        取得したPositivesの数をカウントして代入
         positivesCountLabel.text = String(resultPositives.count)
         
-      
-//        日付の形を定義するための定数を定義する
+        
+        //        日付の形を定義するための定数を定義する
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(secondsFromGMT: 0)!
-//        "yyyy/MM/dd"の形にするための宣言
+        //        "yyyy/MM/dd"の形にするための宣言
         formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy/MM/dd", options: 0, locale: Locale(identifier: "ja_JP"))
-//        記録されているPositivesの日付を取得して変数に入れる
-//        変数定義
+        //        記録されているPositivesの日付を取得して変数に入れる
+        //        変数定義
         var recordDays: [String] = []
-//        同じ日付が変数に入っていなければ、入れない
+        //        同じ日付が変数に入っていなければ、入れない
         for positive in resultPositives {
             if !recordDays.contains(formatter.string(from: positive.date))  {
                 recordDays.append(formatter.string(from: positive.date))
             }
         }
-//        合計記録日数を代入
+        //        合計記録日数を代入
         totalRecordDays.text = String(recordDays.count)
-
+        
     }
     
     //    全てのネガティブデータを取得するためのメソッド定義
@@ -90,7 +90,7 @@ extension CalendarViewController {
         let realm = try! Realm()
         //        Negativesクラスの全てを取得する
         let resultNegatives = realm.objects(Negatives.self)
-//        Negativesのラベルにネガティブの数をカウントして代入
+        //        Negativesのラベルにネガティブの数をカウントして代入
         negativesCountLabel.text = String(resultNegatives.count)
     }
     

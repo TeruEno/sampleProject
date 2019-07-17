@@ -13,30 +13,30 @@ class SettingsTableViewController: UITableViewController {
     //    テーブルで使用するSectionのタイトルの配列
     var sections: NSArray = ["ユーザー設定", "その他"]
     //    各Sectionで使用するセルの配列
-    let users: NSArray = ["日記名"]
+    let users: NSArray = ["ユーザー名"]
     let others: NSArray = ["このアプリを評価する", "ご意見はこちら", "プライバシーポリシー"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-/*
-        // Status Barの高さを取得を.する.
-        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
-        
-        // Viewの高さと幅を取得する.
-        let displayWidth: CGFloat = self.view.frame.width
-        let displayHeight: CGFloat = self.view.frame.height
-        
-        // TableViewの生成( status barの高さ分ずらして表示 ).
-        let TableView: UITableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
-        // Cell名の登録をおこなう.
-        TableView.register(UITableViewCell.self, forCellReuseIdentifier: "settingsTableViewCell")
-        // DataSourceの設定をする.
-        TableView.dataSource = self
-        // Delegateを設定する.
-        TableView.delegate = self
-        // Viewに追加する.
-        self.view.addSubview(TableView)
- */
+        /*
+         // Status Barの高さを取得を.する.
+         let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+         
+         // Viewの高さと幅を取得する.
+         let displayWidth: CGFloat = self.view.frame.width
+         let displayHeight: CGFloat = self.view.frame.height
+         
+         // TableViewの生成( status barの高さ分ずらして表示 ).
+         let TableView: UITableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+         // Cell名の登録をおこなう.
+         TableView.register(UITableViewCell.self, forCellReuseIdentifier: "settingsTableViewCell")
+         // DataSourceの設定をする.
+         TableView.dataSource = self
+         // Delegateを設定する.
+         TableView.delegate = self
+         // Viewに追加する.
+         self.view.addSubview(TableView)
+         */
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -79,7 +79,7 @@ class SettingsTableViewController: UITableViewController {
         }
         return cell
     }
-
+    
     //        画面遷移処理
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        セルの選択を解除
