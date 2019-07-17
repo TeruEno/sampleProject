@@ -11,12 +11,10 @@ import FSCalendar
 import RealmSwift
 
 class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
-    
     @IBOutlet weak var positivesCountLabel: UILabel!
     @IBOutlet weak var negativesCountLabel: UILabel!
     @IBOutlet weak var continueRecordDays: UILabel!
     @IBOutlet weak var totalRecordDays: UILabel!
-    
     
     var positives: Positives? = nil
     var negatives: Negatives? = nil
@@ -41,39 +39,29 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         super.viewDidLoad()
     }
     
-    
 }
 
 
 extension CalendarViewController {
-    
-    //    // 画面遷移の処理
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if (segue.identifier == "toHistory") {
-    //            let HistoryView = segue.destination as! HistoryViewController
-    //            HistoryView.date = self.date
-    //            }
-    //        }
-    
     // MARK: - FSCalendar Delegate
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         //  日付選択時に履歴詳細画面に遷移する
         performSegue(withIdentifier: "toHistory", sender: date)
-        
     }
+    
 }
 
 //  Realmに関する処理
 extension CalendarViewController {
     
-    //    全てのポジティブデータを取得する
+    //    全てのポジティブデータを取得するためのメソッドを定義
     //    （記録するときは必ずポジティブが入力されていないといけないので、全ての記録日数を判断するときもポジティブデータで判断できる）
     func getPositives(with positive:String) {
         //          Realmに接続する
         let realm = try! Realm()
-        //        ポジティブの個数を取得する
+        //        Positivesの全てを並び替えて取得する
         let resultPositives = realm.objects(Positives.self).sorted(byKeyPath: "date", ascending: true)
-//        print(resultPositives)
+//        取得したPositivesの数をカウントして代入
         positivesCountLabel.text = String(resultPositives.count)
         
       
@@ -91,18 +79,18 @@ extension CalendarViewController {
                 recordDays.append(formatter.string(from: positive.date))
             }
         }
-//        合計記録日数のラベルに代入
+//        合計記録日数を代入
         totalRecordDays.text = String(recordDays.count)
 
     }
     
-    //    全てのネガティブデータを取得する
+    //    全てのネガティブデータを取得するためのメソッド定義
     func getNegatives(with negatives:String) {
         //        Realmに接続する
         let realm = try! Realm()
-        //        ネガティブの個数を取得する
+        //        Negativesクラスの全てを取得する
         let resultNegatives = realm.objects(Negatives.self)
-//        Negativesのラベルにネガティブの個数を代入
+//        Negativesのラベルにネガティブの数をカウントして代入
         negativesCountLabel.text = String(resultNegatives.count)
     }
     
