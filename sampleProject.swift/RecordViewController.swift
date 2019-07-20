@@ -111,7 +111,7 @@ extension RecordViewController {
         //        Realmに書き込み
         try! realm.write {      //  Realmに書き込みモード
             realm.add(negatives!)        //  DBに追加
-            }
+        }
     }
     //        getNegativeMaxId
     func getNegativeMaxId() -> Int {
@@ -126,16 +126,16 @@ extension RecordViewController {
         //        Realmに接続
         let realm = try! Realm()
         //        登録処理
-//                Positiveの初期化
+        //                Positiveの初期化
         positives = Positives()
         positives?.id = getPositiveMaxId()
         positives?.positiveText = text
         positives?.date = Date()
         //        Realmに書き込み
-            try! realm.write{       //  Realmの書き込みモード
-                realm.add(positives!)        //  DBに追加
-            }
+        try! realm.write{       //  Realmの書き込みモード
+            realm.add(positives!)        //  DBに追加
         }
+    }
     
     //    getPositiveMaxId
     func getPositiveMaxId() -> Int {

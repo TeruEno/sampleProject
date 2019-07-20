@@ -9,37 +9,104 @@
 import UIKit
 import RealmSwift
 
-class HistoryViewController: UIViewController {
-    @IBOutlet weak var textFieldPositive1: UITextField!
-    @IBOutlet weak var textFieldPositive2: UITextField!
-    @IBOutlet weak var textFieldPositive3: UITextField!
-    @IBOutlet weak var textFieldNegative: UITextField!
+class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var dateLabel: UINavigationItem!
+    @IBOutlet weak var eventTableView: UITableView!
     
     
-    var date: String! // 受け皿の用意
+    //    テーブルで使用するSectionのタイトルの配列
+    let sections:NSArray = ["ポジティブ", "ネガティブ"]
+    //    カレンダーで選択した日付をDatet型で受け取る
+    var targetDate: Date!
     
+    
+    //    セクションの表示数
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return sections.count
+    }
+    
+    //    セクションごとのセルの内容を決める
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return sections.count
+    }
+    
+    //    セクションのヘッダーにタイトルを設定する
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        //        sectionsの中身を表示する
+        return sections[section] as? String
+    }
+    
+    //    セルの表示数と内容を決める
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        //        if indexPath.section == 0 {
+        //            cell.textLabel?.text = "\(users[indexPath.row])"
+        //        } else if indexPath.section == 1 {
+        //            cell.textLabel?.text = "\(others[indexPath.row])"
+        //        }
+        return cell
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        dateLabel.text = date // Labelに日付を表示
+        //        メッソドを呼び出す
+        getNegatives()
+        getPositives()
+        //        日付表示
+        dateLabel.title = targetDate.toString(format: "yyyy/MM/dd")
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    @IBAction func didClickEditBtn(_ sender: Any) {
+    //    メソッドを定義するときに引数を必要とするのは、引数の値によって結果を変えたいとき。
+    //    メソッドは仕組みを作るだけで、決まった値を入れるものではない。
+    //    dateは日付、formatは日付の表示形式をメソッドを呼び出すときに決めて使う
+    func stringFromDate(date: Date, format: String) -> String {
+        let formatter: DateFormatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.dateFormat = format
+        return formatter.string(from: date)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
+    
 }
+
+//  Realmに関する処理
+extension HistoryViewController {
+    //    全てのポジティブを取得するためのメソッドを定義
+    func getPositives() {
+        //        Realmに接続する
+        let realm = try!Realm()
+        let calendar = Calendar(identifier: .gregorian)
+        let todayStart = calendar.startOfDay(for: targetDate)
+        
+        let todayEnd: Date = {
+            let components = DateComponents(day: 1, second: -1)
+            return calendar.date(byAdding: components, to: todayStart)!
+        }()
+        
+        //        Positivesの全てを取得する
+        let resultPoives = realm.objects(Positives.self).filter("date BETWEEN %@", [todayStart, todayEnd])
+        print(realm.objects(Positives.self).reversed())
+        
+    }
+    //    全てのネガティブを取得するためのメソッドを定義
+    func getNegatives() {
+        //        Realmに接続する
+        let realm = try!Realm()
+        //        Positivesの全てを取得する
+        let resultNegatives = realm.objects(Negatives.self)
+        
+    }
+}
+
+
