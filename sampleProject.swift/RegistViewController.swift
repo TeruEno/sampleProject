@@ -8,7 +8,7 @@
 
 import UIKit
 import RealmSwift
-import IQKeyboardManagerSwift
+
 
 class RegistViewController: UIViewController {
     

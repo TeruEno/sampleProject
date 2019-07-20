@@ -84,7 +84,4 @@ class SettingsTableViewController: UITableViewController {
     
 }
 
-//  レイアウトに関する処理
-extension SettingsTableViewController {
-    
-}
+

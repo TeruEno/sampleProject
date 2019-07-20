@@ -33,13 +33,13 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        
         /*
-        //        記録した日付を取得
-        let calendar = Calendar.current
-        let selectDate = calendar.date(from: DateComponents(year: 2018, month: 6, day: 19))
-        statusCalendar.select(selectDate)
-        */
+         //        記録した日付を取得
+         let calendar = Calendar.current
+         let selectDate = calendar.date(from: DateComponents(year: 2018, month: 6, day: 19))
+         statusCalendar.select(selectDate)
+         */
     }
     
     
@@ -101,6 +101,28 @@ extension CalendarViewController {
         totalRecordDays.text = String(recordDays.count)
         
     }
+
+    
+     //    RealmDBから日付が最初(0時）と最後(24時)の間で設定されているデータを取得し、そのデータの数を返すようにすることで任意の日付に任意の数の点マークがつけられるようになる。
+     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int{
+     var tmpList: Results<Positives>!
+     // 対象の日付が設定されているデータを取得する
+     do {
+     let realm = try Realm()
+     let predicate = NSPredicate(format: "%@ =< date AND date < %@", getBeginingAndEndOfDay(date).begining as CVarArg, getBeginingAndEndOfDay(date).end as CVarArg)
+     tmpList = realm.objects(Positives.self).filter(predicate)
+     } catch {
+     }
+     return tmpList.count
+     }
+     
+     // 日の始まりと終わりを取得
+     private func getBeginingAndEndOfDay(_ date:Date) -> (begining: Date , end: Date) {
+     let begining = Calendar(identifier: .gregorian).startOfDay(for: date)
+     let end = begining + 24*60*60
+     return (begining, end)
+     }
+
     
     //    全てのネガティブデータを取得するためのメソッド定義
     func getNegatives() {
@@ -113,3 +135,4 @@ extension CalendarViewController {
     }
     
 }
+

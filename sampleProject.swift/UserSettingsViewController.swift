@@ -1,5 +1,5 @@
 //
-//  DiarySettingsViewController.swift
+//  UserSettingsViewController.swift
 //  sampleProject
 //
 //  Created by TeruakiEnomoto on 2019/07/14.
@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import IQKeyboardManagerSwift
 
 class DiarySettingsViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!

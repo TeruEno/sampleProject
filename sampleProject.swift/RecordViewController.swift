@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import IQKeyboardManagerSwift
 
 class RecordViewController: UIViewController {
     @IBOutlet weak var negativeLabel: UILabel!
@@ -26,7 +25,7 @@ class RecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func didClickRecordBtn(_ sender: Any) {
