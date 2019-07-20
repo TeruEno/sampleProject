@@ -13,6 +13,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 import Realm
 import RealmSwift
 
@@ -25,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+//        IQKeyboardManagerを使用する
+        IQKeyboardManager.shared.enable = true
         
         //
         //        初回起動画面を動的に切り替える
@@ -80,7 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
     
 }
 

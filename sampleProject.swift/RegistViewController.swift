@@ -8,8 +8,8 @@
 
 import UIKit
 import RealmSwift
-import IQKeyboardManagerSwift
 
+// セットアップ画面
 class RegistViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!

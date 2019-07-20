@@ -1,5 +1,5 @@
 //
-//  DiarySettingsViewController.swift
+//  UserSettingsViewController.swift
 //  sampleProject
 //
 //  Created by TeruakiEnomoto on 2019/07/14.
@@ -8,15 +8,14 @@
 
 import UIKit
 import RealmSwift
-import IQKeyboardManagerSwift
 
+// ユーザ名編集画面
 class DiarySettingsViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,18 +31,6 @@ class DiarySettingsViewController: UIViewController {
         //               NavigationControllerの履歴から前の画面に遷移
         navigationController?.popViewController(animated: true)
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 //  Relamに関する処理
@@ -66,5 +53,4 @@ extension DiarySettingsViewController {
             targetUserName.name = name
         }
     }
-    
 }

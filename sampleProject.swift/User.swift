@@ -18,6 +18,4 @@ class User: Object {
     @objc dynamic var name: String = String()
     @objc dynamic var date: Date = Date()
     
-    
-    
 }

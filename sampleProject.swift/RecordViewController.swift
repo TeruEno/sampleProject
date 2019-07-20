@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import IQKeyboardManagerSwift
 
 class RecordViewController: UIViewController {
     @IBOutlet weak var negativeLabel: UILabel!
@@ -26,7 +25,7 @@ class RecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func didClickRecordBtn(_ sender: Any) {
@@ -47,7 +46,7 @@ class RecordViewController: UIViewController {
             //                アラートを表示する
             present(alert, animated: true, completion: nil)
         } else if negativeTextField.text == "" && positiveTextField1.text == "" && positiveTextField2.text == ""  && positiveTextField3.text == "" && positiveTextField4.text == "" {   //      negativeとpositiveの両方が空欄の場合
-            let alert = UIAlertController(title: "入力不足", message: "ネガティブ欄とポジティブ欄が入力されていません。入力してください。", preferredStyle: .alert)
+            let alert = UIAlertController(title: "入力不足", message: "ポジティブ欄が入力されていません。入力してください。", preferredStyle: .alert)
             //            選択肢
             let yesAction = UIAlertAction(title: "OK", style: .default) {
                 (UIAlertAction) in print("OK")
@@ -81,15 +80,14 @@ class RecordViewController: UIViewController {
             completeAlert.addAction(completeAction)
             //                アラートを表示する
             present(completeAlert, animated: true, completion: nil)
+            
+            //        テキストフィールドの値を初期化
+            negativeTextField.text = ""
+            positiveTextField1.text = ""
+            positiveTextField2.text = ""
+            positiveTextField3.text = ""
+            positiveTextField4.text = ""
         }
-        
-        //        テキストフィールドの値を初期化
-        negativeTextField.text = ""
-        positiveTextField1.text = ""
-        positiveTextField2.text = ""
-        positiveTextField3.text = ""
-        positiveTextField4.text = ""
-        
     }
     
 }

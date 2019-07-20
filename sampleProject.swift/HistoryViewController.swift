@@ -9,17 +9,16 @@
 import UIKit
 import RealmSwift
 
+// 過去記録詳細画面
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var dateLabel: UINavigationItem!
     @IBOutlet weak var eventTableView: UITableView!
     
-    
     //    テーブルで使用するSectionのタイトルの配列
     let sections:NSArray = ["ポジティブ", "ネガティブ"]
     //    カレンダーで選択した日付をDatet型で受け取る
     var targetDate: Date!
-    
     
     //    セクションの表示数
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,7 +51,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //        メッソドを呼び出す
+        //        メソッドを呼び出す
         getNegatives()
         getPositives()
         //        日付表示
@@ -73,11 +72,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         formatter.dateFormat = format
         return formatter.string(from: date)
     }
-    
-    
-    
-    
-    
 }
 
 //  Realmに関する処理
@@ -108,5 +102,3 @@ extension HistoryViewController {
         
     }
 }
-
-
