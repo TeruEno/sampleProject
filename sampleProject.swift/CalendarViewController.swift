@@ -10,13 +10,14 @@ import UIKit
 import FSCalendar
 import RealmSwift
 
+// カレンダー画面
 class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate {
+    
     @IBOutlet weak var positivesCountLabel: UILabel!
     @IBOutlet weak var negativesCountLabel: UILabel!
     @IBOutlet weak var continueRecordDays: UILabel!
     @IBOutlet weak var totalRecordDays: UILabel!
     @IBOutlet weak var statusCalendar: FSCalendar!
-    
     
     //    positivesに入るのはPositivesクラスの値、もしくはnil
     //    positives: Positives = ~ と書いたらnilも入らない
@@ -82,14 +83,12 @@ extension CalendarViewController {
         //        取得したPositivesの数をカウントして代入
         positivesCountLabel.text = String(resultPositives.count)
         
-        
         //        日付の形を定義するための定数を定義する
         let formatter = DateFormatter()
         formatter.timeZone = TimeZone(secondsFromGMT: 0)!
         //        "yyyy/MM/dd"の形にするための宣言
         formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy/MM/dd", options: 0, locale: Locale(identifier: "ja_JP"))
         //        記録されているPositivesの日付を取得して変数に入れる
-        //        変数定義
         var recordDays: [String] = []
         //        同じ日付が変数に入っていなければ、入れない
         for positive in resultPositives {
@@ -119,7 +118,7 @@ extension CalendarViewController {
      // 日の始まりと終わりを取得
      private func getBeginingAndEndOfDay(_ date:Date) -> (begining: Date , end: Date) {
      let begining = Calendar(identifier: .gregorian).startOfDay(for: date)
-     let end = begining + 24*60*60
+     let end = begining + 24 * 60 * 60
      return (begining, end)
      }
 

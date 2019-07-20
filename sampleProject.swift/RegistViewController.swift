@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-
+// セットアップ画面
 class RegistViewController: UIViewController {
     
     @IBOutlet weak var userNameTextField: UITextField!
