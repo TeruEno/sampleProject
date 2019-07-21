@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import QuartzCore
 
 // 過去記録詳細画面
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -15,37 +16,48 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var dateLabel: UINavigationItem!
     @IBOutlet weak var eventTableView: UITableView!
     
+    
     //    テーブルで使用するSectionのタイトルの配列
     let sections:NSArray = ["ポジティブ", "ネガティブ"]
+    //    ポジティブセクションのセルに表示する内容
+    var positiveEvents:NSArray = []
+    //    ネガティブセクションのセルに表示する内容
+    var negativeEvents:NSArray = []
     //    カレンダーで選択した日付をDatet型で受け取る
     var targetDate: Date!
     
-    //    セクションの表示数
+    //    セクションの表示数を設定
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return sections.count
     }
     
-    //    セクションごとのセルの内容を決める
+    //    各セクションのセルの表示数を設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections.count
+        if section == 0 {
+            return positiveEvents.count
+        } else if section == 1 {
+            return negativeEvents.count
+        } else {
+            return 0
+        }
     }
     
-    //    セクションのヘッダーにタイトルを設定する
+    //    セクションのヘッダーにタイトルを設定
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //        sectionsの中身を表示する
         return sections[section] as? String
     }
     
-    //    セルの表示数と内容を決める
+    //    セルの表示数と内容を設定
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        //        if indexPath.section == 0 {
-        //            cell.textLabel?.text = "\(users[indexPath.row])"
-        //        } else if indexPath.section == 1 {
-        //            cell.textLabel?.text = "\(others[indexPath.row])"
-        //        }
+        if indexPath.section == 0 {
+            cell.textLabel?.text = "\(positiveEvents[indexPath.row])"
+        } else if indexPath.section == 1 {
+            cell.textLabel?.text = "\(negativeEvents[indexPath.row])"
+        }
         return cell
     }
     
@@ -61,6 +73,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     //    メソッドを定義するときに引数を必要とするのは、引数の値によって結果を変えたいとき。
@@ -90,15 +103,26 @@ extension HistoryViewController {
         
         //        Positivesの全てを取得する
         let resultPoives = realm.objects(Positives.self).filter("date BETWEEN %@", [todayStart, todayEnd])
-        print(realm.objects(Positives.self).reversed())
+        print(resultPoives)
+        return positiveEvents = [resultPoives]
         
     }
     //    全てのネガティブを取得するためのメソッドを定義
     func getNegatives() {
         //        Realmに接続する
         let realm = try!Realm()
-        //        Positivesの全てを取得する
-        let resultNegatives = realm.objects(Negatives.self)
+        let calendar = Calendar(identifier: .gregorian)
+        let todayStart = calendar.startOfDay(for: targetDate)
         
+        let todayEnd: Date = {
+            let components = DateComponents(day: 1, second: -1)
+            return calendar.date(byAdding: components, to: todayStart)!
+        }()
+        //        Positivesの全てを取得する
+        let resultNegatives = realm.objects(Negatives.self).filter("date BETWEEN %@", [todayStart, todayEnd])
+        print(resultNegatives)
+        return negativeEvents = [resultNegatives]
     }
+    
+    
 }

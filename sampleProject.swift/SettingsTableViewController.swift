@@ -12,22 +12,28 @@ import RealmSwift
 class SettingsTableViewController: UITableViewController {
     
     //    テーブルで使用するSectionのタイトルの配列
-    var sections: NSArray = ["ユーザー設定", "その他"]
+    var sections: NSArray = ["ユーザー設定", "その他", "アプリバージョン"]
     //    各Sectionで使用するセルの配列
-    let users: NSArray = ["ユーザー名"]
+    let users: NSArray = ["ユーザー名編集"]
     let others: NSArray = ["このアプリを評価する", "ご意見はこちら", "プライバシーポリシー"]
+    let appVersion: NSArray = ["アプリバージョン"]
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //        NavigationBarのタイトル表示
+        self.parent?.navigationItem.title = "設定画面"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - Table view data source
-    //    セクションの表示数を決める
+    //    セクションの表示数を設定
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
+//    各セクションのセルの表示数を設定
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
@@ -35,11 +41,11 @@ class SettingsTableViewController: UITableViewController {
         } else if section == 1 {
             return others.count
         } else {
-            return 0
+            return appVersion.count
         }
     }
     
-    //    セクションのヘッダーにタイトルを設定する
+    //    セクションのヘッダーにタイトルを設定
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //        sectionsの中身を表示する
         return sections[section] as? String
@@ -54,6 +60,8 @@ class SettingsTableViewController: UITableViewController {
             cell.textLabel?.text = "\(users[indexPath.row])"
         } else if indexPath.section == 1 {
             cell.textLabel?.text = "\(others[indexPath.row])"
+        } else if indexPath.section == 2 {
+            cell.textLabel?.text = "\(appVersion[indexPath.row])"
         }
         return cell
     }
@@ -66,8 +74,12 @@ class SettingsTableViewController: UITableViewController {
             performSegue(withIdentifier: "toDiarySettings", sender: nil)
         } else if indexPath.section == 1 {
             print("Value: \(others[indexPath.row])")
+        } else if indexPath.section == 2 {
+            print("Value: \(appVersion[indexPath.row])")
         }
     }
+    
+    
 }
 
 
