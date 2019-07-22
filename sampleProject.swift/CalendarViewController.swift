@@ -15,7 +15,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     @IBOutlet weak var positivesCountLabel: UILabel!
     @IBOutlet weak var negativesCountLabel: UILabel!
-    @IBOutlet weak var continueRecordDays: UILabel!
     @IBOutlet weak var totalRecordDays: UILabel!
     @IBOutlet weak var statusCalendar: FSCalendar!
     
@@ -24,16 +23,17 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     var positives: Positives? = nil
     var negatives: Negatives? = nil
     
-    override func loadView() {
-        super.loadView()
+
+
+    override func viewWillAppear(_ animated: Bool) {
         //        getPositivesメソッドを呼び出す
         getPositives()
         //        getNegativesメソッドを呼び出す
         getNegatives()
         //        NavigationBarのタイトル表示
         getUserName()
+        
     }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,20 +62,7 @@ extension CalendarViewController {
         //  日付選択時に履歴詳細画面に遷移する
         performSegue(withIdentifier: "toHistory", sender: newDate)
     }
-    /*
-     // 選択した日付の取得
-     func calendar(_ calendar: FSCalendar, didSelect selectDate: Date, at monthPosition: FSCalendarMonthPosition) {
-     //  日付選択時に履歴詳細画面に遷移する
-     performSegue(withIdentifier: "toHistory", sender: selectDate)
-     }
-     */
     
-    /*
-     //        記録した日付を取得
-     let calendar = Calendar.current
-     let selectDate = calendar.date(from: DateComponents(year: 2018, month: 6, day: 19))
-     statusCalendar.select(selectDate)
-     */
 }
 
 

@@ -28,6 +28,7 @@ class RecordViewController: UIViewController {
         self.parent?.navigationItem.title = "記録画面"
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -44,6 +45,7 @@ class RecordViewController: UIViewController {
             //            選択肢
             let yesAction = UIAlertAction(title: "OK", style: .default) {
                 (UIAlertAction) in print("OK")
+                
             }
             //                選択肢の追加
             alert.addAction(yesAction)
@@ -60,6 +62,25 @@ class RecordViewController: UIViewController {
             //                アラートを表示する
             present(alert, animated: true, completion: nil)
             
+        } else if negativeTextField.text == "" && positiveTextField1.text != "" {
+            recordPositive(with: positiveEvent1!)
+            recordComplete()
+            
+        } else if negativeTextField.text == "" && positiveTextField2.text != ""{
+            recordPositive(with: positiveEvent2!)
+            recordComplete()
+            
+        } else if negativeTextField.text == "" && positiveTextField3.text != ""{
+            recordPositive(with: positiveEvent3!)
+            recordComplete()
+            
+        } else if negativeTextField.text == "" && positiveTextField4.text != ""{
+            recordPositive(with: positiveEvent4!)
+            recordComplete()
+            
+        } else if negativeTextField.text == ""{
+            
+            
         } else {    //  Realmにデータを保存する
             //            recordNegativeメソッドを呼び出す
             recordNegative(with: negativeEvent!)
@@ -74,25 +95,37 @@ class RecordViewController: UIViewController {
             if positiveTextField4.text != "" {
                 recordPositive(with: positiveEvent4!)
             }
-            //            入力完了のアラート
-            let completeAlert = UIAlertController(title: "記録完了", message: "おめでとうございます。記録できましたね!!", preferredStyle: .alert)
-            //            選択肢
-            let completeAction = UIAlertAction(title: "OK", style: .default) {
-                (UIAlertAction) in print("OK")
-            }
-            //                選択肢の追加
-            completeAlert.addAction(completeAction)
-            //                アラートを表示する
-            present(completeAlert, animated: true, completion: nil)
-            
-            //        テキストフィールドの値を初期化
-            negativeTextField.text = ""
-            positiveTextField1.text = ""
-            positiveTextField2.text = ""
-            positiveTextField3.text = ""
-            positiveTextField4.text = ""
+
         }
     }
+    
+}
+
+//  入力完了時に関する処理
+extension RecordViewController {
+    func recordComplete() {
+    //            入力完了のアラート
+    let completeAlert = UIAlertController(title: "記録完了", message: "おめでとうございます。記録できましたね!!", preferredStyle: .alert)
+    //            選択肢
+    let completeAction = UIAlertAction(title: "OK", style: .default) {
+        (UIAlertAction) in print("OK")
+    }
+    //                選択肢の追加
+    completeAlert.addAction(completeAction)
+    //                アラートを表示する
+    present(completeAlert, animated: true, completion: nil)
+    
+    //        テキストフィールドの値を初期化
+    negativeTextField.text = ""
+    positiveTextField1.text = ""
+    positiveTextField2.text = ""
+    positiveTextField3.text = ""
+    positiveTextField4.text = ""
+    }
+}
+
+// 記録可能時パターン
+extension RecordViewController {
     
 }
 
