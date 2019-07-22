@@ -23,7 +23,8 @@ class RecordViewController: UIViewController {
     //    対象となるpositiveをnilで定義
     var positives: Positives? = nil
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func loadView() {
+        super.loadView()
         self.parent?.navigationItem.title = "記録画面"
     }
     

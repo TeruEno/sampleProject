@@ -27,8 +27,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     var targetDate: Date!
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func loadView() {
+        super.loadView()
         //        メソッドを呼び出す
         getNegatives()
         getPositives()
@@ -36,6 +36,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         dateLabel.title = targetDate.toString(format: "yyyy/MM/dd")
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,9 +90,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return formatter.string(from: date)
     }
     
-//    cellを選択した時の動作
+    //    cellを選択した時の動作
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        セルの選択を解除
+        //        セルの選択を解除
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
 }
@@ -103,7 +104,7 @@ extension HistoryViewController {
         //        Realmに接続する
         let realm = try!Realm()
         
-//        日付取得
+        //        日付取得
         let calendar = Calendar(identifier: .gregorian)
         let todayStart = calendar.startOfDay(for: targetDate)
         let todayEnd: Date = {
@@ -113,7 +114,7 @@ extension HistoryViewController {
         
         //        Positivesを日付指定した分だけ取得する
         let resultPoives = realm.objects(Positives.self).filter("date BETWEEN %@", [todayStart, todayEnd])
-//        print(resultPoives)
+        //        print(resultPoives)
         return positiveEvents = resultPoives.reversed()
         
     }
@@ -130,7 +131,7 @@ extension HistoryViewController {
         }()
         //        Negativesを日付指定した分だけ取得する
         let resultNegatives = realm.objects(Negatives.self).filter("date BETWEEN %@", [todayStart, todayEnd])
-//        print(resultNegatives[0].negativeText)
+        //        print(resultNegatives[0].negativeText)
         return negativeEvents = resultNegatives.reversed()
     }
     
