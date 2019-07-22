@@ -20,11 +20,27 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     //    テーブルで使用するSectionのタイトルの配列
     let sections:NSArray = ["ポジティブ", "ネガティブ"]
     //    ポジティブセクションのセルに表示する内容
-    var positiveEvents:NSArray = []
+    var positiveEvents:[Positives] = []
     //    ネガティブセクションのセルに表示する内容
-    var negativeEvents:NSArray = []
+    var negativeEvents:[Negatives] = []
     //    カレンダーで選択した日付をDatet型で受け取る
     var targetDate: Date!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //        メソッドを呼び出す
+        getNegatives()
+        getPositives()
+        //        日付表示
+        dateLabel.title = targetDate.toString(format: "yyyy/MM/dd")
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     //    セクションの表示数を設定
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,27 +70,14 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         if indexPath.section == 0 {
-            cell.textLabel?.text = "\(positiveEvents[indexPath.row])"
+            print(positiveEvents)
+            cell.textLabel?.text = "\(positiveEvents[indexPath.row].positiveText)"
         } else if indexPath.section == 1 {
-            cell.textLabel?.text = "\(negativeEvents[indexPath.row])"
+            cell.textLabel?.text = "\(negativeEvents[indexPath.row].negativeText)"
         }
         return cell
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //        メソッドを呼び出す
-        getNegatives()
-        getPositives()
-        //        日付表示
-        dateLabel.title = targetDate.toString(format: "yyyy/MM/dd")
-        
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
     //    メソッドを定義するときに引数を必要とするのは、引数の値によって結果を変えたいとき。
     //    メソッドは仕組みを作るだけで、決まった値を入れるものではない。
@@ -85,29 +88,36 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         formatter.dateFormat = format
         return formatter.string(from: date)
     }
+    
+//    cellを選択した時の動作
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        セルの選択を解除
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+    }
 }
 
 //  Realmに関する処理
 extension HistoryViewController {
-    //    全てのポジティブを取得するためのメソッドを定義
+    //    ポジティブを取得するためのメソッドを定義
     func getPositives() {
         //        Realmに接続する
         let realm = try!Realm()
+        
+//        日付取得
         let calendar = Calendar(identifier: .gregorian)
         let todayStart = calendar.startOfDay(for: targetDate)
-        
         let todayEnd: Date = {
             let components = DateComponents(day: 1, second: -1)
             return calendar.date(byAdding: components, to: todayStart)!
         }()
         
-        //        Positivesの全てを取得する
+        //        Positivesを日付指定した分だけ取得する
         let resultPoives = realm.objects(Positives.self).filter("date BETWEEN %@", [todayStart, todayEnd])
-        print(resultPoives)
-        return positiveEvents = [resultPoives]
+//        print(resultPoives)
+        return positiveEvents = resultPoives.reversed()
         
     }
-    //    全てのネガティブを取得するためのメソッドを定義
+    //    ネガティブを取得するためのメソッドを定義
     func getNegatives() {
         //        Realmに接続する
         let realm = try!Realm()
@@ -118,10 +128,10 @@ extension HistoryViewController {
             let components = DateComponents(day: 1, second: -1)
             return calendar.date(byAdding: components, to: todayStart)!
         }()
-        //        Positivesの全てを取得する
+        //        Negativesを日付指定した分だけ取得する
         let resultNegatives = realm.objects(Negatives.self).filter("date BETWEEN %@", [todayStart, todayEnd])
-        print(resultNegatives)
-        return negativeEvents = [resultNegatives]
+//        print(resultNegatives[0].negativeText)
+        return negativeEvents = resultNegatives.reversed()
     }
     
     
