@@ -26,15 +26,13 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     //    カレンダーで選択した日付をDatet型で受け取る
     var targetDate: Date!
     
-    
-    override func loadView() {
-        super.loadView()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         //        メソッドを呼び出す
         getNegatives()
         getPositives()
         //        日付表示
         dateLabel.title = targetDate.toString(format: "yyyy/MM/dd")
-        
     }
     
     

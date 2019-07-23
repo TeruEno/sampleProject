@@ -13,8 +13,9 @@ import RealmSwift
 class DiarySettingsViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     
-    override func loadView() {
-        super.loadView()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         //        userNameTextFieldにユーザー名を表示させるメソッドを呼び出す
         getUserName(with: 0)
     }

@@ -17,10 +17,6 @@ class SettingsTableViewController: UITableViewController {
     let users: NSArray = ["ユーザー名編集"]
     let others: NSArray = ["個人情報保護方針"]
     
-    override func loadView() {
-        super.loadView()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         //        NavigationBarのタイトル表示
         self.parent?.navigationItem.title =  "設定画面"

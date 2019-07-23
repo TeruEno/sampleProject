@@ -23,11 +23,6 @@ class RecordViewController: UIViewController {
     //    対象となるpositiveをnilで定義
     var positives: Positives? = nil
     
-    override func loadView() {
-        super.loadView()
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.parent?.navigationItem.title = "記録画面"
@@ -114,27 +109,6 @@ extension RecordViewController {
     }
 }
 
-// 記録可能時パターン
-extension RecordViewController {
-    
-    //        } else if negativeTextField.text == "" && positiveTextField1.text != "" {
-    //            recordPositive(with: positiveEvent1!)
-    //            recordComplete()
-    //
-    //        } else if negativeTextField.text == "" && positiveTextField2.text != ""{
-    //            recordPositive(with: positiveEvent2!)
-    //            recordComplete()
-    //
-    //        } else if negativeTextField.text == "" && positiveTextField3.text != ""{
-    //            recordPositive(with: positiveEvent3!)
-    //            recordComplete()
-    //
-    //        } else if negativeTextField.text == "" && positiveTextField4.text != ""{
-    //            recordPositive(with: positiveEvent4!)
-    //            recordComplete()
-    //
-    //        } else if negativeTextField.text == ""{
-}
 
 //  Realmに関する処理
 extension RecordViewController {

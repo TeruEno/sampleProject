@@ -8,6 +8,7 @@
 
 import UIKit
 
+// HexからUIColorを生成するためのクラス
 extension UIColor {
     convenience init(hex: String, alpha: CGFloat) {
         let v = Int("000000" + hex, radix: 16) ?? 0
