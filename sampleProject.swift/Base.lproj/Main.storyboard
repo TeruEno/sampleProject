@@ -139,6 +139,9 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="subtitleSelectionColor">
                                         <color key="value" red="0.15686274510000001" green="0.86274509799999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                        <color key="value" red="0.15686274510000001" green="0.86274509799999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="LXz-Jb-DE3" id="XyP-dz-8iw"/>
@@ -225,7 +228,7 @@
                                     <constraint firstAttribute="width" constant="265" id="yIl-6T-vOZ"/>
                                 </constraints>
                                 <color key="textColor" red="0.25490196079999999" green="0.1450980392" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ポジティブ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emx-tu-eyq">
@@ -341,7 +344,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mmN-5S-60t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsTableViewCell" id="STJ-dI-Eyq">
                                 <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
@@ -362,6 +365,7 @@
                     <tabBarItem key="tabBarItem" title="SETTINGS" id="DCp-hJ-bSq"/>
                     <connections>
                         <segue destination="d2D-J3-wJB" kind="show" identifier="toDiarySettings" id="oHG-Da-dAp"/>
+                        <segue destination="FCd-7f-tS6" kind="show" identifier="toPrivacyPolicy" id="2R2-Xw-nZL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0RI-N4-QwE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -428,6 +432,25 @@
             </objects>
             <point key="canvasLocation" x="-1284.0579710144928" y="1400.5434782608697"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="6js-hD-GTk">
+            <objects>
+                <viewController id="FCd-7f-tS6" customClass="PrivacyPolicyViewController" customModule="sampleProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F72-iW-Nhz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ODa-jQ-Evn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="VuM-pO-H1g"/>
+                    <connections>
+                        <outlet property="titlePageLabel" destination="VuM-pO-H1g" id="H5b-RT-JPZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6EX-O1-Sko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1284" y="2134"/>
+        </scene>
         <!--Date-->
         <scene sceneID="Lhi-HD-3oG">
             <objects>
@@ -454,6 +477,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="301" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

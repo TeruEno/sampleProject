@@ -19,6 +19,9 @@
 		04528C0A22CF1E5E0052649A /* Negatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0922CF1E5E0052649A /* Negatives.swift */; };
 		04528C0C22CF1EDC0052649A /* Positives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0B22CF1EDC0052649A /* Positives.swift */; };
 		0452C8B222E37240004A5FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0452C8B122E37240004A5FA4 /* Assets.xcassets */; };
+		046F3B3022E6C3D600F2A471 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F3B2F22E6C3D600F2A471 /* PrivacyPolicyViewController.swift */; };
+		046F3B3222E6C4BF00F2A471 /* UnedittableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F3B3122E6C4BF00F2A471 /* UnedittableText.swift */; };
+		046F3B3422E6C5B800F2A471 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F3B3322E6C5B800F2A471 /* UIColorHex.swift */; };
 		047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A23EF22BF839500B89632 /* HistoryViewController.swift */; };
 		0490634C22C5FB240034359E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490634B22C5FB240034359E /* RecordViewController.swift */; };
 		9357DA01BC7AECF7EF6B9E74 /* Pods_sampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E415799CA6AF06A387BC87A1 /* Pods_sampleProject.framework */; };
@@ -39,6 +42,9 @@
 		04528C0922CF1E5E0052649A /* Negatives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Negatives.swift; sourceTree = "<group>"; };
 		04528C0B22CF1EDC0052649A /* Positives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positives.swift; sourceTree = "<group>"; };
 		0452C8B122E37240004A5FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046F3B2F22E6C3D600F2A471 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		046F3B3122E6C4BF00F2A471 /* UnedittableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnedittableText.swift; sourceTree = "<group>"; };
+		046F3B3322E6C5B800F2A471 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
 		047A23EF22BF839500B89632 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 1; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		0490634B22C5FB240034359E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		29058C43F3BDF5D6AB034FA3 /* Pods-sampleProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleProject.release.xcconfig"; path = "Target Support Files/Pods-sampleProject/Pods-sampleProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 				044ABD0922B0C67900CC63A4 /* AppDelegate.swift */,
 				044ABD0B22B0C67900CC63A4 /* CalendarViewController.swift */,
 				044ABD0D22B0C67900CC63A4 /* Main.storyboard */,
+				046F3B2F22E6C3D600F2A471 /* PrivacyPolicyViewController.swift */,
+				046F3B3322E6C5B800F2A471 /* UIColorHex.swift */,
+				046F3B3122E6C4BF00F2A471 /* UnedittableText.swift */,
 				04013F2422DB7EAC00B62A8B /* UserSettingsViewController.swift */,
 				0428D3CF22DB347C00068EAB /* SettingsTableViewController.swift */,
 				044ABD1222B0C67C00CC63A4 /* LaunchScreen.storyboard */,
@@ -234,9 +243,12 @@
 				04528C0A22CF1E5E0052649A /* Negatives.swift in Sources */,
 				044ABD0C22B0C67900CC63A4 /* CalendarViewController.swift in Sources */,
 				0490634C22C5FB240034359E /* RecordViewController.swift in Sources */,
+				046F3B3022E6C3D600F2A471 /* PrivacyPolicyViewController.swift in Sources */,
 				0428D3D022DB347C00068EAB /* SettingsTableViewController.swift in Sources */,
 				047A23F022BF839500B89632 /* HistoryViewController.swift in Sources */,
 				041BA86322CDCDEB00D3780D /* User.swift in Sources */,
+				046F3B3422E6C5B800F2A471 /* UIColorHex.swift in Sources */,
+				046F3B3222E6C4BF00F2A471 /* UnedittableText.swift in Sources */,
 				04528C0C22CF1EDC0052649A /* Positives.swift in Sources */,
 				04013F2522DB7EAC00B62A8B /* UserSettingsViewController.swift in Sources */,
 				045048F122C3500A002F7825 /* RegistViewController.swift in Sources */,

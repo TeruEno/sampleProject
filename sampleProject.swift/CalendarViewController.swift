@@ -23,20 +23,27 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     var positives: Positives? = nil
     var negatives: Negatives? = nil
     
-
-
+    /*
+     //    コードで全てを形成する場合は必要だが、storyboardを使用する場合は必要ない
+     override func loadView() {
+     super.loadView()
+     }
+     */
+    
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         //        getPositivesメソッドを呼び出す
         getPositives()
         //        getNegativesメソッドを呼び出す
         getNegatives()
-        //        NavigationBarのタイトル表示
+        //        NavigationBarにタイトル表示するメソッドを呼び出す
         getUserName()
-        
+        //        statusCalendarを作り直す
+        statusCalendar.reloadData()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     

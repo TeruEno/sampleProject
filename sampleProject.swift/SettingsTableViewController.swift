@@ -15,12 +15,15 @@ class SettingsTableViewController: UITableViewController {
     var sections: NSArray = ["ユーザー設定", "その他"]
     //    各Sectionで使用するセルの配列
     let users: NSArray = ["ユーザー名編集"]
-    let others: NSArray = ["このアプリを評価する", "ご意見はこちら"]
+    let others: NSArray = ["個人情報保護方針"]
     
     override func loadView() {
         super.loadView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         //        NavigationBarのタイトル表示
-        self.parent?.navigationItem.title = "設定画面"
+        self.parent?.navigationItem.title =  "設定画面"
     }
     
     override func viewDidLoad() {
@@ -65,6 +68,12 @@ class SettingsTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPrivacyPolicy" {
+            let privacyPolicyViewController = segue.destination as! PrivacyPolicyViewController
+            privacyPolicyViewController.titlePage = sender as! String
+        }
+    }
     //        画面遷移処理
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        セルの選択を解除
@@ -72,7 +81,7 @@ class SettingsTableViewController: UITableViewController {
         if indexPath.section == 0 {
             performSegue(withIdentifier: "toDiarySettings", sender: nil)
         } else if indexPath.section == 1 {
-            print("Value: \(others[indexPath.row])")
+            performSegue(withIdentifier: "toPrivacyPolicy", sender: others[0])
         } else {
         }
     }
