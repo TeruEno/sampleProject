@@ -15,7 +15,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     @IBOutlet weak var positivesCountLabel: UILabel!
     @IBOutlet weak var negativesCountLabel: UILabel!
-    @IBOutlet weak var continueRecordDays: UILabel!
     @IBOutlet weak var totalRecordDays: UILabel!
     @IBOutlet weak var statusCalendar: FSCalendar!
     
@@ -24,28 +23,32 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     var positives: Positives? = nil
     var negatives: Negatives? = nil
     
+    /*
+     //    コードで全てを形成する場合は必要だが、storyboardを使用する場合は必要ない
+     override func loadView() {
+     super.loadView()
+     }
+     */
+    
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         //        getPositivesメソッドを呼び出す
         getPositives()
         //        getNegativesメソッドを呼び出す
         getNegatives()
-        
+        //        NavigationBarにタイトル表示するメソッドを呼び出す
+        getUserName()
+        //        statusCalendarを作り直す
+        statusCalendar.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /*
-         //        記録した日付を取得
-         let calendar = Calendar.current
-         let selectDate = calendar.date(from: DateComponents(year: 2018, month: 6, day: 19))
-         statusCalendar.select(selectDate)
-         */
     }
     
     
     
-    // カレンダーの日付を選択したときの画面遷移
+    // カレンダーの日付を選択したときにHistoryViewControllerに選択した日付の情報を送る
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toHistory" {
             let historyViewController = segue.destination as! HistoryViewController
@@ -62,8 +65,9 @@ extension CalendarViewController {
     
     // 選択した日付の取得
     func calendar(_ calendar: FSCalendar, didSelect selectDate: Date, at monthPosition: FSCalendarMonthPosition) {
+        let newDate = selectDate.addingTimeInterval(TimeInterval(NSTimeZone.local.secondsFromGMT()))
         //  日付選択時に履歴詳細画面に遷移する
-        performSegue(withIdentifier: "toHistory", sender: selectDate)
+        performSegue(withIdentifier: "toHistory", sender: newDate)
     }
     
 }
@@ -100,28 +104,28 @@ extension CalendarViewController {
         totalRecordDays.text = String(recordDays.count)
         
     }
-
     
-     //    RealmDBから日付が最初(0時）と最後(24時)の間で設定されているデータを取得し、そのデータの数を返すようにすることで任意の日付に任意の数の点マークがつけられるようになる。
-     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int{
-     var tmpList: Results<Positives>!
-     // 対象の日付が設定されているデータを取得する
-     do {
-     let realm = try Realm()
-     let predicate = NSPredicate(format: "%@ =< date AND date < %@", getBeginingAndEndOfDay(date).begining as CVarArg, getBeginingAndEndOfDay(date).end as CVarArg)
-     tmpList = realm.objects(Positives.self).filter(predicate)
-     } catch {
-     }
-     return tmpList.count
-     }
-     
-     // 日の始まりと終わりを取得
-     private func getBeginingAndEndOfDay(_ date:Date) -> (begining: Date , end: Date) {
-     let begining = Calendar(identifier: .gregorian).startOfDay(for: date)
-     let end = begining + 24 * 60 * 60
-     return (begining, end)
-     }
-
+    
+    //    RealmDBから日付が最初(0時）と最後(24時)の間で設定されているデータを取得し、そのデータの数を返すようにすることで任意の日付に任意の数の点マークがつけられるようになる。
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int{
+        var tmpList: Results<Positives>!
+        // 対象の日付が設定されているデータを取得する
+        do {
+            let realm = try Realm()
+            let predicate = NSPredicate(format: "%@ =< date AND date < %@", getBeginingAndEndOfDay(date).begining as CVarArg, getBeginingAndEndOfDay(date).end as CVarArg)
+            tmpList = realm.objects(Positives.self).filter(predicate)
+        } catch {
+        }
+        return tmpList.count
+    }
+    
+    // 日の始まりと終わりを取得
+    private func getBeginingAndEndOfDay(_ date:Date) -> (begining: Date , end: Date) {
+        let begining = Calendar(identifier: .gregorian).startOfDay(for: date)
+        let end = begining + 24 * 60 * 60
+        return (begining, end)
+    }
+    
     
     //    全てのネガティブデータを取得するためのメソッド定義
     func getNegatives() {
@@ -133,5 +137,14 @@ extension CalendarViewController {
         negativesCountLabel.text = String(resultNegatives.count)
     }
     
+    //    ユーザー名を取得する
+    func getUserName() {
+        //        Realmに接続する
+        let realm = try! Realm()
+        //        Userクラスの全てを取得する（配列になっている）
+        let UserName = realm.objects(User.self)
+        //        UserName配列の一番最初のユーザー名を代入する
+        self.parent?.navigationItem.title = UserName[0].name
+    }
 }
 

@@ -13,13 +13,14 @@ import RealmSwift
 class DiarySettingsViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     
+    override func loadView() {
+        super.loadView()
+        //        userNameTextFieldにユーザー名を表示させるメソッドを呼び出す
+        getUserName(with: 0)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        getUserName()
     }
     
     @IBAction func didClickBtn(_ sender: Any) {
@@ -36,13 +37,13 @@ class DiarySettingsViewController: UIViewController {
 //  Relamに関する処理
 extension DiarySettingsViewController {
     //    ユーザーの情報を取得するためのメソッドを定義
-    func getUserName() {
+    func getUserName(with id: Int) {
         //        Realmに接続する
         let realm = try! Realm()
         //        Userクラスの全てを取得する（配列になっている）
         let UserName = realm.objects(User.self)
         //        UserName配列の一番最初のユーザー名を代入する
-        userNameTextField.text = UserName[0].name
+        userNameTextField.text = UserName[id].name
     }
     //    ユーザー名の更新処理
     func updateUserName(with name:String, for targetUserName: User) {

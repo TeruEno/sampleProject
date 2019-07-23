@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        IQKeyboardManagerを使用する
+        //        IQKeyboardManagerを使用する
         IQKeyboardManager.shared.enable = true
         
         //
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
         //        Realm内に登録してある一番最初のユーザー情報を取得
         let user = realm.objects(User.self).first
-        //        .realmファイルが保存されている場所を表示する
+        //        .realmファイルが保存されている場所をコンソールに表示する
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         //        どのstoryboardを使うか指定する
         let storybord:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = viewController
         
         //        何秒表示するか
-        sleep(3)
+        sleep(2)
         return true
     }
     

@@ -14,20 +14,29 @@ class SettingsTableViewController: UITableViewController {
     //    テーブルで使用するSectionのタイトルの配列
     var sections: NSArray = ["ユーザー設定", "その他"]
     //    各Sectionで使用するセルの配列
-    let users: NSArray = ["ユーザー名"]
-    let others: NSArray = ["このアプリを評価する", "ご意見はこちら", "プライバシーポリシー"]
+    let users: NSArray = ["ユーザー名編集"]
+    let others: NSArray = ["個人情報保護方針"]
+    
+    override func loadView() {
+        super.loadView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //        NavigationBarのタイトル表示
+        self.parent?.navigationItem.title =  "設定画面"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - Table view data source
-    //    セクションの表示数を決める
+    //    セクションの表示数を設定
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
+    //    各セクションのセルの表示数を設定
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
@@ -39,7 +48,7 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
-    //    セクションのヘッダーにタイトルを設定する
+    //    セクションのヘッダーにタイトルを設定
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         //        sectionsの中身を表示する
         return sections[section] as? String
@@ -54,10 +63,17 @@ class SettingsTableViewController: UITableViewController {
             cell.textLabel?.text = "\(users[indexPath.row])"
         } else if indexPath.section == 1 {
             cell.textLabel?.text = "\(others[indexPath.row])"
+        } else {
         }
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPrivacyPolicy" {
+            let privacyPolicyViewController = segue.destination as! PrivacyPolicyViewController
+            privacyPolicyViewController.titlePage = sender as! String
+        }
+    }
     //        画面遷移処理
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        セルの選択を解除
@@ -65,9 +81,12 @@ class SettingsTableViewController: UITableViewController {
         if indexPath.section == 0 {
             performSegue(withIdentifier: "toDiarySettings", sender: nil)
         } else if indexPath.section == 1 {
-            print("Value: \(others[indexPath.row])")
+            performSegue(withIdentifier: "toPrivacyPolicy", sender: others[0])
+        } else {
         }
     }
+    
+    
 }
 
 
