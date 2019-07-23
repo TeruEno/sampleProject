@@ -180,7 +180,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bbj-NT-vHU"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="CALENDAR" id="JZT-YZ-jrR"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="icons8-カレンダー-50" id="JZT-YZ-jrR" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="yOffSet">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="ユーザー名" id="Ko0-4v-gm6" userLabel="UserName"/>
                     <connections>
                         <outlet property="negativesCountLabel" destination="W4w-mg-DOf" id="HQr-L2-hgk"/>
@@ -194,7 +200,7 @@
             </objects>
             <point key="canvasLocation" x="-859.4202898550725" y="584.51086956521749"/>
         </scene>
-        <!--RECORD-->
+        <!--Record-->
         <scene sceneID="76l-2q-rEJ">
             <objects>
                 <viewController id="XaL-TP-5ez" customClass="RecordViewController" customModule="sampleProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -298,7 +304,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QcE-rS-Pww"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="RECORD" id="5cG-a8-d5r">
+                    <tabBarItem key="tabBarItem" title="Record" image="icons8-魔法スクロール-50" id="5cG-a8-d5r" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
@@ -315,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="-2050.7246376811595" y="-210.32608695652175"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Animated Tab Bar Controller-->
         <scene sceneID="w59-uW-Wz8">
             <objects>
-                <tabBarController id="iXW-p1-z3D" sceneMemberID="viewController">
+                <tabBarController id="iXW-p1-z3D" customClass="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="sQr-vo-ED3"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UVZ-XV-wV7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -337,7 +343,7 @@
             </objects>
             <point key="canvasLocation" x="-2049" y="585"/>
         </scene>
-        <!--SETTINGS-->
+        <!--Setting-->
         <scene sceneID="8wd-8s-eGP">
             <objects>
                 <tableViewController id="16i-9K-rHK" customClass="SettingsTableViewController" customModule="sampleProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -362,7 +368,7 @@
                             <outlet property="delegate" destination="16i-9K-rHK" id="AU4-Ww-lt0"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="SETTINGS" id="DCp-hJ-bSq"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="icons8-設定3-50" id="DCp-hJ-bSq" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
                     <connections>
                         <segue destination="d2D-J3-wJB" kind="show" identifier="toDiarySettings" id="oHG-Da-dAp"/>
                         <segue destination="FCd-7f-tS6" kind="show" identifier="toPrivacyPolicy" id="2R2-Xw-nZL"/>
@@ -589,5 +595,10 @@
             <point key="canvasLocation" x="-3612" y="585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-カレンダー-50" width="25" height="25"/>
+        <image name="icons8-設定3-50" width="25" height="25"/>
+        <image name="icons8-魔法スクロール-50" width="25" height="25"/>
+    </resources>
     <color key="tintColor" red="0.25490196078431371" green="0.14509803921568626" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
 </document>
