@@ -13,14 +13,14 @@ import RealmSwift
 class DiarySettingsViewController: UIViewController {
     @IBOutlet weak var userNameTextField: UITextField!
     
+    override func loadView() {
+        super.loadView()
+        //        userNameTextFieldにユーザー名を表示させるメソッドを呼び出す
+        getUserName(with: 0)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        //        userNameTextFieldにユーザー名を表示させるメソッドを呼び出す
-        getUserName(with: 0)
     }
     
     @IBAction func didClickBtn(_ sender: Any) {
