@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string></string>
 	<key>CFBundleDisplayName</key>
-	<string>Thought to Ponder</string>
+	<string>Thoughts to Ponder</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIcons</key>
