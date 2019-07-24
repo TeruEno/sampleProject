@@ -14,7 +14,7 @@ class SettingsTableViewController: UITableViewController {
     //    テーブルで使用するSectionのタイトルの配列
     var sections: NSArray = ["ユーザー設定", "その他"]
     //    各Sectionで使用するセルの配列
-    let users: NSArray = ["ユーザー名編集"]
+    let users: NSArray = ["名前編集"]
     let others: NSArray = ["個人情報保護方針"]
     
     override func viewWillAppear(_ animated: Bool) {

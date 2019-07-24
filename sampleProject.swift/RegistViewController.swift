@@ -33,7 +33,7 @@ class RegistViewController: UIViewController {
             //            画面遷移
             performSegue(withIdentifier: "toStart", sender: userName)
         } else { // 値が空の場合はアラートを表示する
-            let alert = UIAlertController(title: "未入力", message: "ユーザー名が入力されていません", preferredStyle: .alert)
+            let alert = UIAlertController(title: "未入力", message: "名前が入力されていません", preferredStyle: .alert)
             //            選択肢
             let yesAction = UIAlertAction(title: "OK", style: .default) {
                 (UIAlertAction) in print("OK")
