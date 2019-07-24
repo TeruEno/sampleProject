@@ -20,7 +20,7 @@ class UneditableText: UIView {
         tv.center = self.center
         tv.text = text
         tv.textColor = UIColor.darkText
-        tv.font = UIFont.systemFont(ofSize: 13.0)
+        tv.font = UIFont.systemFont(ofSize: 20.0)
         
         // リンクをクリック可能にする (PhoneNumber, Link, Address, CalenderEvent, None, All)
         tv.dataDetectorTypes = UIDataDetectorTypes.link

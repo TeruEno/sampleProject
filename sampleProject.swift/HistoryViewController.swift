@@ -88,10 +88,22 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return formatter.string(from: date)
     }
     
+//    記録内容を表示する画面へデータを渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let recordDetailViewController = segue.destination as! RecordDetailViewController
+            recordDetailViewController.recordDetail = sender as! String
+        }
+    }
     //    cellを選択した時の動作
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        セルの選択を解除
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        if indexPath.section == 0 {
+            performSegue(withIdentifier: "toDetail", sender: positiveEvents[indexPath.row].positiveText)
+        } else if indexPath.section == 1 {
+            performSegue(withIdentifier: "toDetail", sender: negativeEvents[indexPath.row].negativeText)
+        }
     }
 }
 

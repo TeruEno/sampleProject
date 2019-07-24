@@ -408,7 +408,7 @@
                                     <action selector="didClickBtn:" destination="d2D-J3-wJB" eventType="touchUpInside" id="zdi-Kh-iZy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名編集" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-kB-yqu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前編集" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbp-kB-yqu">
                                 <rect key="frame" x="145" y="269" width="124" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9sh-2v-1gC"/>
@@ -503,6 +503,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="Ij7-yP-WBF" id="75Z-cd-uVY"/>
                         <outlet property="eventTableView" destination="OgT-eU-PRi" id="wkP-XG-hKv"/>
+                        <segue destination="Pej-84-C28" kind="show" identifier="toDetail" id="5kw-0Y-QfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAR-yV-WYl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -541,7 +542,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoc-LC-Smc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoc-LC-Smc">
                                 <rect key="frame" x="73" y="287.66666666666669" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="aK8-Cu-c6g"/>
@@ -593,6 +594,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5N8-5T-wP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3612" y="585"/>
+        </scene>
+        <!--Record Detail View Controller-->
+        <scene sceneID="qz4-Hf-cUn">
+            <objects>
+                <viewController id="Pej-84-C28" customClass="RecordDetailViewController" customModule="sampleProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oi1-oZ-TAj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.92549019610000005" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="3JV-yv-IWK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ybm-BS-ko1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJo-JG-aNS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="585"/>
         </scene>
     </scenes>
     <resources>

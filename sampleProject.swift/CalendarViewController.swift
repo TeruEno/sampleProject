@@ -52,7 +52,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toHistory" {
             let historyViewController = segue.destination as! HistoryViewController
-            //            historyViewController.targetStringDate = sender as! String
             historyViewController.targetDate = sender as? Date
             
         }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04013F2522DB7EAC00B62A8B /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04013F2422DB7EAC00B62A8B /* UserSettingsViewController.swift */; };
 		041BA86322CDCDEB00D3780D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041BA86222CDCDEB00D3780D /* User.swift */; };
+		0426566422E7E40500579734 /* RecordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426566322E7E40500579734 /* RecordDetailViewController.swift */; };
 		0428D3D022DB347C00068EAB /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428D3CF22DB347C00068EAB /* SettingsTableViewController.swift */; };
 		0432DE5822E19EFB00CD7F8B /* extendDateClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432DE5722E19EFB00CD7F8B /* extendDateClass.swift */; };
 		044ABD0A22B0C67900CC63A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ABD0922B0C67900CC63A4 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		04013F2422DB7EAC00B62A8B /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
 		041BA86222CDCDEB00D3780D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0426566322E7E40500579734 /* RecordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailViewController.swift; sourceTree = "<group>"; };
 		0428D3CF22DB347C00068EAB /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		0432DE5722E19EFB00CD7F8B /* extendDateClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extendDateClass.swift; sourceTree = "<group>"; };
 		044ABD0622B0C67900CC63A4 /* sampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 				044ABD0922B0C67900CC63A4 /* AppDelegate.swift */,
 				044ABD0B22B0C67900CC63A4 /* CalendarViewController.swift */,
 				044ABD0D22B0C67900CC63A4 /* Main.storyboard */,
+				0426566322E7E40500579734 /* RecordDetailViewController.swift */,
 				046F3B2F22E6C3D600F2A471 /* PrivacyPolicyViewController.swift */,
 				046F3B3322E6C5B800F2A471 /* UIColorHex.swift */,
 				046F3B3122E6C4BF00F2A471 /* UnedittableText.swift */,
@@ -256,6 +259,7 @@
 				04528C0C22CF1EDC0052649A /* Positives.swift in Sources */,
 				04013F2522DB7EAC00B62A8B /* UserSettingsViewController.swift in Sources */,
 				045048F122C3500A002F7825 /* RegistViewController.swift in Sources */,
+				0426566422E7E40500579734 /* RecordDetailViewController.swift in Sources */,
 				044ABD0A22B0C67900CC63A4 /* AppDelegate.swift in Sources */,
 				0432DE5822E19EFB00CD7F8B /* extendDateClass.swift in Sources */,
 			);

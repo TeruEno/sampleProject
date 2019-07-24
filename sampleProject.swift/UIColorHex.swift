@@ -8,17 +8,22 @@
 
 import UIKit
 
-// HexからUIColorを生成するためのクラス
+// UIColorの共通クラス
 extension UIColor {
-    convenience init(hex: String, alpha: CGFloat) {
-        let v = Int("000000" + hex, radix: 16) ?? 0
-        let r = CGFloat(v / Int(powf(256, 2)) % 256) / 255
-        let g = CGFloat(v / Int(powf(256, 1)) % 256) / 255
-        let b = CGFloat(v / Int(powf(256, 0)) % 256) / 255
-        self.init(red: r, green: g, blue: b, alpha: min(max(alpha, 0), 1))
-    }
-    
-    convenience init(hex: String) {
-        self.init(hex: hex, alpha: 1.0)
+    // hexで色を指定できるようにする処理
+    class func hex(string: String, alpha : CGFloat) -> UIColor {
+        
+        let string_ = string.replacingOccurrences(of: "#", with: "")
+        let scanner = Scanner(string: string_ as String)
+        var color: UInt32 = 0
+        
+        if scanner.scanHexInt32(&color) {
+            let r = CGFloat((color & 0xFF0000) >> 16) / 255.0
+            let g = CGFloat((color & 0x00FF00) >> 8) / 255.0
+            let b = CGFloat(color & 0x0000FF) / 255.0
+            return UIColor(red: r, green: g, blue: b, alpha: alpha)
+        } else {
+            return UIColor.white
+        }
     }
 }
