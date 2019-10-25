@@ -304,7 +304,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QcE-rS-Pww"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Record" image="icons8-魔法スクロール-50" id="5cG-a8-d5r" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                    <tabBarItem key="tabBarItem" title="Record" image="icons8-インクのクイル-50" id="5cG-a8-d5r" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
@@ -613,9 +613,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-インクのクイル-50" width="25" height="25"/>
         <image name="icons8-カレンダー-50" width="25" height="25"/>
         <image name="icons8-設定3-50" width="25" height="25"/>
-        <image name="icons8-魔法スクロール-50" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.25490196078431371" green="0.14509803921568626" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
 </document>
