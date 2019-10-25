@@ -20,6 +20,9 @@
 		04528C0A22CF1E5E0052649A /* Negatives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0922CF1E5E0052649A /* Negatives.swift */; };
 		04528C0C22CF1EDC0052649A /* Positives.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04528C0B22CF1EDC0052649A /* Positives.swift */; };
 		0452C8B222E37240004A5FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0452C8B122E37240004A5FA4 /* Assets.xcassets */; };
+		045D3D9323631E1F002B82C1 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D3D9223631E1F002B82C1 /* ShareViewController.swift */; };
+		045D3D9623631E1F002B82C1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045D3D9423631E1F002B82C1 /* MainInterface.storyboard */; };
+		045D3D9A23631E1F002B82C1 /* testShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 045D3D9023631E1F002B82C1 /* testShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		046F3B3022E6C3D600F2A471 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F3B2F22E6C3D600F2A471 /* PrivacyPolicyViewController.swift */; };
 		046F3B3222E6C4BF00F2A471 /* UnedittableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F3B3122E6C4BF00F2A471 /* UnedittableText.swift */; };
 		046F3B3422E6C5B800F2A471 /* UIColorHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F3B3322E6C5B800F2A471 /* UIColorHex.swift */; };
@@ -28,6 +31,30 @@
 		0490634C22C5FB240034359E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490634B22C5FB240034359E /* RecordViewController.swift */; };
 		9357DA01BC7AECF7EF6B9E74 /* Pods_sampleProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E415799CA6AF06A387BC87A1 /* Pods_sampleProject.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		045D3D9823631E1F002B82C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 044ABCFE22B0C67900CC63A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 045D3D8F23631E1F002B82C1;
+			remoteInfo = testShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		045D3D9B23631E1F002B82C1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				045D3D9A23631E1F002B82C1 /* testShareExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		04013F2422DB7EAC00B62A8B /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +72,12 @@
 		04528C0922CF1E5E0052649A /* Negatives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Negatives.swift; sourceTree = "<group>"; };
 		04528C0B22CF1EDC0052649A /* Positives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Positives.swift; sourceTree = "<group>"; };
 		0452C8B122E37240004A5FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		045D3D9023631E1F002B82C1 /* testShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = testShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		045D3D9223631E1F002B82C1 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		045D3D9523631E1F002B82C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		045D3D9723631E1F002B82C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045D3D9F23632534002B82C1 /* testShareExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testShareExtension.entitlements; sourceTree = "<group>"; };
+		045D3DA0236325F7002B82C1 /* sampleProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = sampleProject.entitlements; sourceTree = SOURCE_ROOT; };
 		046F3B2F22E6C3D600F2A471 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		046F3B3122E6C4BF00F2A471 /* UnedittableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnedittableText.swift; sourceTree = "<group>"; };
 		046F3B3322E6C5B800F2A471 /* UIColorHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorHex.swift; sourceTree = "<group>"; };
@@ -65,6 +98,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		045D3D8D23631E1F002B82C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -72,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				044ABD0822B0C67900CC63A4 /* sampleProject */,
+				045D3D9123631E1F002B82C1 /* testShareExtension */,
 				044ABD0722B0C67900CC63A4 /* Products */,
 				A5A7F17D4CEC1B2DDD755F37 /* Pods */,
 				1366B09D5BB515BC0B899D15 /* Frameworks */,
@@ -82,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				044ABD0622B0C67900CC63A4 /* sampleProject.app */,
+				045D3D9023631E1F002B82C1 /* testShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +131,7 @@
 		044ABD0822B0C67900CC63A4 /* sampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				045D3DA0236325F7002B82C1 /* sampleProject.entitlements */,
 				0490634B22C5FB240034359E /* RecordViewController.swift */,
 				044ABD0922B0C67900CC63A4 /* AppDelegate.swift */,
 				044ABD0B22B0C67900CC63A4 /* CalendarViewController.swift */,
@@ -112,6 +155,17 @@
 			);
 			name = sampleProject;
 			path = sampleProject.swift;
+			sourceTree = "<group>";
+		};
+		045D3D9123631E1F002B82C1 /* testShareExtension */ = {
+			isa = PBXGroup;
+			children = (
+				045D3D9F23632534002B82C1 /* testShareExtension.entitlements */,
+				045D3D9223631E1F002B82C1 /* ShareViewController.swift */,
+				045D3D9423631E1F002B82C1 /* MainInterface.storyboard */,
+				045D3D9723631E1F002B82C1 /* Info.plist */,
+			);
+			path = testShareExtension;
 			sourceTree = "<group>";
 		};
 		1366B09D5BB515BC0B899D15 /* Frameworks */ = {
@@ -143,15 +197,34 @@
 				044ABD0322B0C67900CC63A4 /* Frameworks */,
 				044ABD0422B0C67900CC63A4 /* Resources */,
 				2F94AC3390771A1B5ABB338D /* [CP] Embed Pods Frameworks */,
+				045D3D9B23631E1F002B82C1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				045D3D9923631E1F002B82C1 /* PBXTargetDependency */,
 			);
 			name = sampleProject;
 			productName = sampleProject;
 			productReference = 044ABD0622B0C67900CC63A4 /* sampleProject.app */;
 			productType = "com.apple.product-type.application";
+		};
+		045D3D8F23631E1F002B82C1 /* testShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 045D3D9E23631E1F002B82C1 /* Build configuration list for PBXNativeTarget "testShareExtension" */;
+			buildPhases = (
+				045D3D8C23631E1F002B82C1 /* Sources */,
+				045D3D8D23631E1F002B82C1 /* Frameworks */,
+				045D3D8E23631E1F002B82C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testShareExtension;
+			productName = testShareExtension;
+			productReference = 045D3D9023631E1F002B82C1 /* testShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -159,12 +232,15 @@
 		044ABCFE22B0C67900CC63A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = TeruakiEnomoto;
 				TargetAttributes = {
 					044ABD0522B0C67900CC63A4 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					045D3D8F23631E1F002B82C1 = {
+						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
@@ -182,6 +258,7 @@
 			projectRoot = "";
 			targets = (
 				044ABD0522B0C67900CC63A4 /* sampleProject */,
+				045D3D8F23631E1F002B82C1 /* testShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +272,14 @@
 				0452C8B222E37240004A5FA4 /* Assets.xcassets in Resources */,
 				044ABD0F22B0C67900CC63A4 /* Main.storyboard in Resources */,
 				048FB37922E7342100249D5F /* TabBarIcon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		045D3D8E23631E1F002B82C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045D3D9623631E1F002B82C1 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +350,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		045D3D8C23631E1F002B82C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045D3D9323631E1F002B82C1 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		045D3D9923631E1F002B82C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 045D3D8F23631E1F002B82C1 /* testShareExtension */;
+			targetProxy = 045D3D9823631E1F002B82C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		044ABD0D22B0C67900CC63A4 /* Main.storyboard */ = {
@@ -282,6 +383,14 @@
 				044ABD1322B0C67C00CC63A4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		045D3D9423631E1F002B82C1 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				045D3D9523631E1F002B82C1 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -319,7 +428,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Teruaki Enomoto (ZS566QADF3)";
+
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = ZS566QADF3;
@@ -339,7 +450,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -351,6 +462,7 @@
 		};
 		044ABD1722B0C67C00CC63A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29058C43F3BDF5D6AB034FA3 /* Pods-sampleProject.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -381,7 +493,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Teruaki Enomoto (ZS566QADF3)";
+
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = ZS566QADF3;
@@ -396,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -411,11 +525,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 86D2C8758AE962B86111B631 /* Pods-sampleProject.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+        
+				CODE_SIGN_ENTITLEMENTS = sampleProject.entitlements;
+
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZS566QADF3;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/sampleProject.swift/info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -435,22 +554,75 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29058C43F3BDF5D6AB034FA3 /* Pods-sampleProject.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+        
+				CODE_SIGN_ENTITLEMENTS = sampleProject.entitlements;
+
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZS566QADF3;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/sampleProject.swift/info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Teru-Eno.sampleProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+
 				RUN_CLANG_STATIC_ANALYZER = YES;
+
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		045D3D9C23631E1F002B82C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = testShareExtension/testShareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZS566QADF3;
+				INFOPLIST_FILE = testShareExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Teru-Eno.sampleProject.testShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		045D3D9D23631E1F002B82C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = testShareExtension/testShareExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZS566QADF3;
+				INFOPLIST_FILE = testShareExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Teru-Eno.sampleProject.testShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -471,6 +643,15 @@
 			buildConfigurations = (
 				044ABD1922B0C67C00CC63A4 /* Debug */,
 				044ABD1A22B0C67C00CC63A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		045D3D9E23631E1F002B82C1 /* Build configuration list for PBXNativeTarget "testShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				045D3D9C23631E1F002B82C1 /* Debug */,
+				045D3D9D23631E1F002B82C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
