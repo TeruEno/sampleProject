@@ -6,6 +6,7 @@
 //  Copyright © 2019 TeruakiEnomoto. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import RealmSwift
 
